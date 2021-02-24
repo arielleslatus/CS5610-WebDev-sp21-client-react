@@ -1,0 +1,75 @@
+.ats-row {
+    background-color: white;
+    margin: 0 auto;
+    color: slategrey;
+}
+
+.ats-list-area {
+    padding-top: 109px;
+    margin: 0 auto;
+}
+
+.ats-timestamp-label {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: darkslategrey;
+}
+
+.ats-sticky-list-bar {
+    color: darkslategrey;
+    background-color: lightgrey;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 54px;
+    z-index: 1;
+}
+
+.ats-sticky-x {
+    position: fixed;
+}
+
+.ats-floating-plus-icon {
+    color: darkslateblue;
+    top: 750px;
+    position: fixed;
+    right: 100px;
+
+}
+
+.ats-row-icon {
+    padding-right: 10px;
+    color: slategrey;
+}
+
+.ats-card-icon {
+    padding-right: 10px;
+    padding-top: 10px;
+    color: slategrey;
+}
+
+.ats-card-title {
+    color: darkslategray;
+    font-weight: bold;
+}
+
+.ats-edit-mode-title {
+    color: slategrey;
+}
+
+.ats-sub-nav-bar-icon {
+    padding-right: 10px;
+    padding-top: 10px;
+    color: darkslategray;
+}
+
+.ats-table {
+    height: 100%
+}
+
+.ats-card {
+    padding-top: 10px;
+}
+
+

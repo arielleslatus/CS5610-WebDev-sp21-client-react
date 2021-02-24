@@ -1,0 +1,58 @@
+.ats-sticky-nav-bar {
+    color: white;
+    background-color: darkslateblue;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 2;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.ats-page-body {
+    padding-top: 58px;
+    background-color: whitesmoke;
+    padding-bottom: 58px;
+    z-index: 0;
+    border: none;
+    height: 1200px;
+}
+
+.ats-vertical-align {
+    align-self: center;
+}
+
+.ats-login-sign-up-box {
+    background-color: lightgrey;
+    padding: 70px 100px;
+    border-radius: 5px;
+    color: darkslategrey;
+}
+
+.ats-center-heading {
+    text-align: center;
+}
+
+.ats-fill {
+    min-height: 100vh;
+}
+
+.ats-button {
+    background-color: darkslateblue;
+    color: whitesmoke;
+}
+
+.ats-td-vertical-align-middle {
+    vertical-align: middle;
+}
+
+.ats-align-center-horizontal {
+    margin: 0 auto;
+}
+
+.ats-icon-cell-fixed-width {
+    width: 100px;
+}
+
+
