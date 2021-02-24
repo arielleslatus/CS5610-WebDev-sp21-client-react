@@ -1,7 +1,7 @@
 import React from 'react'
 import CourseTable from "../course-table/course-table";
 import CourseGrid from "../course-grid/course-grid";
-import Route from "react-router-dom/es/Route";
+import { Route } from "react-router-dom";
 import courseService from "../../services/course-service"
 import '../course-table/course-table.template.client.css'
 import '../component-style.css'
