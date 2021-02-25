@@ -5,12 +5,14 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CounterReact from "./components/counter/react-state/counter-react";
+import CounterRedux from "./components/counter/redux-state/counter-redux";
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CounterRedux />
   </React.StrictMode>,
   document.getElementById('root')
 );
