@@ -1,8 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import EditableItem from "./editable-item";
 
 const ModuleList = ({modules=[],
-                    createModule}) =>
+                    createModule,
+                    updateModule,
+                    deleteModule}) =>
 
         <div>
 
@@ -11,7 +14,10 @@ const ModuleList = ({modules=[],
                 {
                     modules.map(module =>
                         <li className="list-group-item">
-                            {module.title}
+                            <EditableItem
+                                updateItem={updateModule}
+                                deleteItem={deleteModule}
+                                item={module}/>
                         </li>
                     )
                 }
@@ -32,6 +38,12 @@ const stpm = (state) => ({
 const dtpm = (dispatch) => ({
     createModule: () => {
         dispatch({type: "CREATE_MODULE"})
+    },
+    updateModule: (newItem) => {
+        dispatch({type: "UPDATE_MODULE", updatedModule: newItem})
+    },
+    deleteModule: (moduleToDelete) => {
+        dispatch({type: "DELETE_MODULE", moduleToDelete: moduleToDelete})
     }
 })
 

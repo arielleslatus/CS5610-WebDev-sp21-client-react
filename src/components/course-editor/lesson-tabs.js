@@ -1,26 +1,25 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import EditableItem from "./editable-item";
 
-const LessonTabs = ({lessons=[]}) =>
-        <div>
-            <h2>Lesson Tabs</h2>
-            <ul className="nav nav-tabs">
-                {
-                    lessons.map(lesson =>
-                                    <li className="nav-item">
-                                        <a className="nav-link" href="#">
-                                            {lesson.title}
-                                        </a>
-                                    </li>
-                    )
-                }
-            </ul>
-        </div>
+const LessonTabs = ({lessons = []}) =>
+    <div>
+        <h2>Lesson Tabs</h2>
+        <ul className="nav nav-tabs">
+            {
+                lessons.map(lesson =>
+                                <li className="nav-item">
+                                    <EditableItem item={lesson}/>
+                                </li>
+                )
+            }
+        </ul>
+    </div>
 
 const stpm = (state) => {
     return ({
-                lessons: state.lessonReducer.lessons
-            })
+        lessons: state.lessonReducer.lessons
+    })
 }
 
 const dtpm = (dispatch) => ({

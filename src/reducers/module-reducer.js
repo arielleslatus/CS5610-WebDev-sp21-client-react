@@ -1,3 +1,5 @@
+import {updateCourse} from "../services/course-service";
+
 const initialState = {
     modules: [
         {title: 'CS5610', _id: '123'},
@@ -21,7 +23,27 @@ const ModuleReducer = (state = initialState, action) => {
                 ]
             }
         case "DELETE_MODULE":
+            return {
+                ...state,
+                modules: state.modules.filter(module => {
+                    if (module._id !== action.moduleToDelete._id) {
+                        return true
+                    } else {
+                        return false
+                    }
+                })
+            }
         case "UPDATE_MODULE":
+            return {
+                ...state,
+                modules: state.modules.map(module => {
+                    if (module._id === action.updatedModule._id) {
+                        return action.updatedModule
+                    } else {
+                        return module
+                    }
+                })
+            }
         default:
             return state
 
