@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/counter/react-state/counter-display.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/counter/react-state/counter-down.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/counter/react-state/counter-react.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/counter/react-state/counter-up.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/counter/redux-state/counter-clear.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/counter/redux-state/counter-display.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/counter/redux-state/counter-down.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/counter/redux-state/counter-redux.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/counter/redux-state/counter-up.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-editor/module-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/lesson-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/module-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/counter/redux-state/reducers/count-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/counter/redux-state/reducers/count-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +38,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/course-editor" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -51,7 +46,12 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/course-editor" />
+      <recent name="$PROJECT_DIR$/src/reducers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/course-editor" />
       <recent name="$PROJECT_DIR$/src/components/counter" />
     </key>
   </component>
@@ -66,7 +66,8 @@
       <option name="presentableId" value="Default" />
       <updated>1614193920705</updated>
       <workItem from="1614193922422" duration="2461000" />
-      <workItem from="1614196391486" duration="13052000" />
+      <workItem from="1614196391486" duration="15606000" />
+      <workItem from="1614345453559" duration="8264000" />
     </task>
     <servers />
   </component>
@@ -78,6 +79,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="670" y="188" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1614264323821" />
+    <state x="519" y="607" key="com.intellij.ide.util.TipDialog" timestamp="1614360777979">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="519" y="607" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1614360777979" />
     <state x="570" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1614199501205">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

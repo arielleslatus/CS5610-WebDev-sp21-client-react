@@ -3,7 +3,6 @@ const initialState = {
 }
 
 const CountReducer = (prevState = initialState, action) => {
-    console.log("called from down", action)
     switch (action.type) {
         case "UP":
             return {

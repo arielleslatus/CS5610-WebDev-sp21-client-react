@@ -12,7 +12,7 @@ import CounterRedux from "./components/counter/redux-state/counter-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CounterRedux />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
