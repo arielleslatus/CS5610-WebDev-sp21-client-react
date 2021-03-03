@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom'
 
 const EditableItem = ({item,
                       updateItem,
-                      deleteItem}) => {
+                      deleteItem,
+                      to}) => {
 
     const [editing, setEditing] = useState(false)
     const [itemCache, setItemCache] = useState(item)
@@ -13,7 +14,7 @@ const EditableItem = ({item,
             {
                 !editing &&
                 <>
-                    <Link to="/">
+                    <Link to={to}>
                         {item.title}
                     </Link>
                     <i onClick={() => setEditing(true)}

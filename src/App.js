@@ -11,11 +11,14 @@ import './components/component-style.css';
 function App() {
   return (
       <BrowserRouter>
+
           <Switch>
-              <Route path="/courses/:layout/edit/:courseId"
+
+              <Route path={["/courses/:layout/edit/:courseId",
+                            "/courses/:layout/edit/:courseId/modules/:moduleId"]}
                      exact={true}
                      render={(props) => <CourseEditor {...props}/>} />
-                     <Route path="/courses" component={CourseManager} />
+              <Route path="/courses" component={CourseManager} />
 
           </Switch>
       </BrowserRouter>

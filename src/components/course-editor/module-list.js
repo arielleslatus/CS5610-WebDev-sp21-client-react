@@ -1,24 +1,34 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import {connect, Provider} from 'react-redux'
 import EditableItem from "./editable-item";
+import {useParams} from 'react-router-dom'
 
-const ModuleList = ({modules=[],
-                    createModule,
-                    updateModule,
-                    deleteModule}) =>
+const ModuleList = ({
+                        modules = [],
+                        createModule,
+                        updateModule,
+                        deleteModule
+                    }) => {
 
+    const {layout, courseId, moduleId} = useParams();
+    return (
         <div>
-
             <h2>Module List</h2>
+            <ul>
+                <li>layout: {layout}</li>
+                <li>course id: {courseId}</li>
+                <li>module id: {moduleId}</li>
+            </ul>
             <ul className="list-group">
                 {
                     modules.map(module =>
-                        <li className="list-group-item">
-                            <EditableItem
-                                updateItem={updateModule}
-                                deleteItem={deleteModule}
-                                item={module}/>
-                        </li>
+                                    <li className="list-group-item">
+                                        <EditableItem
+                                            to = {`/courses/${layout}/edit/${courseId}/modules/${module._id}`}
+                                            updateItem={updateModule}
+                                            deleteItem={deleteModule}
+                                            item={module}/>
+                                    </li>
                     )
                 }
                 <li className="list-group-item">
@@ -27,13 +37,12 @@ const ModuleList = ({modules=[],
                 </li>
             </ul>
         </div>
-
+    )
+}
 const stpm = (state) => ({
     modules: state.moduleReducer.modules
 
 })
-
-
 
 const dtpm = (dispatch) => ({
     createModule: () => {
