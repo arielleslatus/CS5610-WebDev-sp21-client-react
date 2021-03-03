@@ -32,7 +32,7 @@ const CourseCard = ({course,
                     {
                         !editing &&
                         <div>
-                            <Link to={"/editor"} className="ats-card-title">
+                            <Link to={`/courses/grid/edit/${course._id}`} className="ats-card-title">
                                 {course.title}
                             </Link>
                             <i onClick={() => setEditing(true)}

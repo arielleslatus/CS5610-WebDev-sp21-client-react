@@ -7,6 +7,7 @@ import '../course-table/course-table.template.client.css'
 import '../component-style.css'
 import SubNavBarGrid from "./sub-nav-bar-grid";
 import SubNavBarTable from "./sub-nav-bar-table";
+import CourseEditor from "../course-editor/course-editor";
 
 class CourseManager extends React.Component {
     state = {
@@ -63,7 +64,7 @@ class CourseManager extends React.Component {
     render() {
         return (
             <div className="container-xxl">
-                <div class="ats-sticky-nav-bar form-control ">
+                <div className="ats-sticky-nav-bar form-control ">
                     <div className="row flex-nowrap">
                         <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1">
                             <i className="fas fa-bars fa-2x"></i>
@@ -86,7 +87,7 @@ class CourseManager extends React.Component {
                 </div>
                 <div className="table-responsive-md">
                     <table className="table ats-fill ats-page-body text-nowrap" >
-                        <Route path="/courses/grid">
+                        <Route path="/courses/grid" exact={true}>
                             <SubNavBarGrid/>
                             <tbody>
                             <CourseGrid
@@ -96,7 +97,7 @@ class CourseManager extends React.Component {
                                 courses={this.state.courses}/>
                             </tbody>
                         </Route>
-                        <Route path="/courses/table">
+                        <Route path="/courses/table" exact={true}>
                             <SubNavBarTable/>
                             <tbody>
                             <CourseTable
@@ -107,6 +108,7 @@ class CourseManager extends React.Component {
                             </tbody>
                         </Route>
                     </table>
+
                 </div>
                 <i onClick={this.addCourse}
                    className="fas fa-plus-circle fa-3x float-right ats-floating-plus-icon"></i>

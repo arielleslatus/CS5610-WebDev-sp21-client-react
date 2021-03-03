@@ -36,7 +36,7 @@ const CourseRow = ({course,
                 <i className="fas fa-folder ats-row-icon"></i>
                 {
                     !editing &&
-                    <Link to={"/editor"}
+                    <Link to={`/courses/table/edit/${course._id}`}
                           className="ats-card-title">
                         {course.title}
                     </Link>
