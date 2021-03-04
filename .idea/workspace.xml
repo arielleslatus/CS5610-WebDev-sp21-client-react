@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/services/module-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/module-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/module-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-table/react.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/module-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/module-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/module-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/module-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

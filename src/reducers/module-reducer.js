@@ -1,21 +1,20 @@
 import {updateCourse} from "../services/course-service";
 
 const initialState = {
-    modules: []
+    modules: [
+        {title: 'CS5610', _id: '123'},
+        {title: 'CS3200', _id: '234'},
+        {title: 'CS5200', _id: '345'},]
 }
 
 const ModuleReducer = (state = initialState, action) => {
     switch (action.type) {
         case "CREATE_MODULE":
-            const newModule = {
-                title: "New Module",
-                _id: (new Date().getTime())
-            }
             return {
                 ...state,
                 modules: [
                     ...state.modules,
-                    newModule
+                    action.module
                 ]
             }
         case "DELETE_MODULE":
