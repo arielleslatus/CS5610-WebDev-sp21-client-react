@@ -4,10 +4,15 @@ import EditableItem from "./editable-item";
 import {useParams} from 'react-router-dom'
 import lessonService from '../../services/lesson-service'
 import moduleService from "../../services/module-service";
+import CourseRow from "../course-table/course-row";
 
 const LessonTabs = ({lessons = [],
+                        createLesson,
                         findLessonsForModule,
-                        createLesson}) => {
+                        updateLesson,
+                        deleteLesson
+                    }) => {
+
     const {layout, courseId, moduleId, lessonId} = useParams();
     useEffect(() => {
         findLessonsForModule(moduleId)
@@ -26,7 +31,10 @@ const LessonTabs = ({lessons = [],
                     lessons.map(lesson =>
                                     <li className="nav-item">
                                         <EditableItem
+                                            key={lesson._id}
                                             to = {`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lesson._id}`}
+                                            updateItem={updateLesson}
+                                            deleteItem={deleteLesson}
                                             item={lesson}/>
                                     </li>
                     )
@@ -47,23 +55,22 @@ const stpm = (state) => {
 }
 
 const dtpm = (dispatch) => ({
-    findLessonsForModule: (moduleId) => {
-        lessonService.findLessonsForModule(moduleId)
-            .then(lessons => dispatch({
-                type: "FIND_LESSONS_FOR_MODULE",
-                lessons: lessons
-            }))
-    },
     createLesson: (moduleId) => {
         lessonService.createLesson(moduleId, {title: 'New Lesson'})
-            .then(lesson => dispatch({
-                type: "CREATE_LESSON",
-                lesson: lesson
-            }))
+            .then(lesson => dispatch({type: "CREATE_LESSON", lesson: lesson}))
+    },
+    findLessonsForModule: (moduleId) => {
+        lessonService.findLessonsForModule(moduleId)
+            .then(lessons => dispatch({type: "FIND_LESSONS_FOR_MODULE", lessons: lessons}))
+    },
+    updateLesson: (newItem) => {
+        lessonService.updateLesson(newItem._id, newItem)
+            .then(status => dispatch({type: "UPDATE_LESSON", updatedLesson: newItem}))
+    },
+    deleteLesson: (lessonToDelete) => {
+        lessonService.deleteLesson(lessonToDelete._id)
+            .then(status => dispatch({type: "DELETE_LESSON", lessonToDelete: lessonToDelete}))
     }
-
-
-
 })
 
 export default connect(stpm, dtpm)(LessonTabs)

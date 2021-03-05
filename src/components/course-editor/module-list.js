@@ -8,9 +8,9 @@ import moduleService from "../../services/module-service";
 const ModuleList = ({
                         modules = [],
                         createModule,
+                        findModulesForCourse,
                         updateModule,
-                        deleteModule,
-                        findModulesForCourse
+                        deleteModule
                     }) => {
 
     const {layout, courseId, moduleId} = useParams();
@@ -26,6 +26,7 @@ const ModuleList = ({
                     modules.map(module =>
                                     <li className="list-group-item">
                                         <EditableItem
+                                            key={module._id}
                                             to = {`/courses/${layout}/edit/${courseId}/modules/${module._id}`}
                                             updateItem={updateModule}
                                             deleteItem={deleteModule}
@@ -51,6 +52,10 @@ const dtpm = (dispatch) => ({
         moduleService.createModule(courseId, {title: 'New Module'})
             .then(module => dispatch({type: "CREATE_MODULE", module: module}))
     },
+    findModulesForCourse: (courseId) => {
+        moduleService.findModulesForCourse(courseId)
+            .then(modules => dispatch({type: "FIND_MODULES_FOR_COURSE", modules: modules}))
+    },
     updateModule: (newItem) => {
         moduleService.updateModule(newItem._id, newItem)
             .then(status => dispatch({type: "UPDATE_MODULE", updatedModule: newItem}))
@@ -59,13 +64,6 @@ const dtpm = (dispatch) => ({
     deleteModule: (moduleToDelete) => {
         moduleService.deleteModule(moduleToDelete._id)
             .then(status => dispatch({type: "DELETE_MODULE", moduleToDelete: moduleToDelete}))
-    },
-    findModulesForCourse: (courseId) => {
-        moduleService.findModulesForCourse(courseId)
-            .then(modules => dispatch({
-                type: "FIND_MODULES_FOR_COURSE",
-                modules: modules
-        }))
     }
 })
 

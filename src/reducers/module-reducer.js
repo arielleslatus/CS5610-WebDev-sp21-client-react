@@ -14,16 +14,10 @@ const ModuleReducer = (state = initialState, action) => {
                     action.module
                 ]
             }
-        case "DELETE_MODULE":
+        case "FIND_MODULES_FOR_COURSE":
             return {
                 ...state,
-                modules: state.modules.filter(module => {
-                    if (module._id !== action.moduleToDelete._id) {
-                        return true
-                    } else {
-                        return false
-                    }
-                })
+                modules: action.modules
             }
         case "UPDATE_MODULE":
             return {
@@ -36,10 +30,16 @@ const ModuleReducer = (state = initialState, action) => {
                     }
                 })
             }
-        case "FIND_MODULES_FOR_COURSE":
+        case "DELETE_MODULE":
             return {
                 ...state,
-                modules: action.modules
+                modules: state.modules.filter(module => {
+                    if (module._id !== action.moduleToDelete._id) {
+                        return true
+                    } else {
+                        return false
+                    }
+                })
             }
         default:
             return state
