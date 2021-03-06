@@ -5,7 +5,7 @@ import {useParams} from 'react-router-dom'
 import topicService, {createTopic} from '../../services/topic-service'
 
 
-const TopicPills = ({topics,
+const TopicPills = ({topics = [],
                         createTopic,
                         findTopicsForLesson,
                         updateTopic,
@@ -15,6 +15,7 @@ const TopicPills = ({topics,
 
     const {layout, courseId, moduleId, lessonId, topicId} = useParams();
     useEffect(() => {
+        findTopicsForLesson(lessonId)
         if (moduleId !== undefined && typeof moduleId !== undefined &&
             lessonId !== undefined && typeof lessonId !== undefined) {
             findTopicsForLesson(lessonId)
@@ -41,8 +42,7 @@ const TopicPills = ({topics,
                     )
                 }
                 <li>
-                    <i onClick={() => createTopic(lessonId)}
-                       className="fas fa-plus"></i>
+                    <i onClick={() => createTopic(lessonId)} className="fas fa-plus"></i>
                 </li>
             </ul>
         </div>
