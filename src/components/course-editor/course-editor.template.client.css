@@ -23,9 +23,7 @@
     color: slategrey;
 }
 
-.ats-list {
-    padding: 0px;
-}
+
 
 .list-group-item:first-child {
     border-top-left-radius: 5px;
@@ -37,10 +35,6 @@
     border-bottom-left-radius: 5px;
 }
 
-.ats-add-module {
-    margin: 20px;
-    padding: 20px;
-}
 
 .ats-pill {
     background-color: lightgrey;
@@ -51,4 +45,34 @@
 
 .ats-back-button {
     color:whitesmoke;
+}
+
+.ats-modules-list {
+    color: darkslateblue;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.ats-lesson-tabs {
+    color: darkslateblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ats-topic-pills {
+    color: darkslateblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.ats-editable-item {
+    margin: 0 auto;
+    text-align: left;
+
+}
+
+.ats-edit-icon {
+    padding-left: 10px;
+    float: right;
 }

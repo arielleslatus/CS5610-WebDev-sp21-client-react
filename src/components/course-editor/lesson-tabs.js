@@ -5,28 +5,33 @@ import {useParams} from 'react-router-dom'
 import lessonService from '../../services/lesson-service'
 
 
-const LessonTabs = ({lessons = [],
+const LessonTabs = ({lessons,
                         createLesson,
                         findLessonsForModule,
                         updateLesson,
-                        deleteLesson
+                        deleteLesson,
+                        clearLessons
                     }) => {
 
     const {layout, courseId, moduleId, lessonId} = useParams();
+
+
     useEffect(() => {
-        if (moduleId !== "undefined" && typeof moduleId !== "undefined") {
+        if (moduleId !== undefined && typeof moduleId !== undefined) {
             findLessonsForModule(moduleId)
+        } else {
+            clearLessons(lessons)
         }
-    }, [moduleId])
+    }, [moduleId, lessons])
     return (
-        <div>
+        <div className="ats-lesson-tabs">
             <h2>Lesson Tabs</h2>
-            <ul className="nav nav-tabs">
+            <ul className="nav nav-pills">
                 {
                     lessons.map(lesson =>
-                                    <li className="nav-item">
+                                    <li key={lesson._id}
+                                        className="nav-item">
                                         <EditableItem
-                                            key={lesson._id}
                                             to = {`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lesson._id}`}
                                             updateItem={updateLesson}
                                             deleteItem={deleteLesson}
@@ -43,6 +48,8 @@ const LessonTabs = ({lessons = [],
         </div>
     )
 }
+
+
 
 const stpm = (state) => {
     return ({
@@ -66,7 +73,10 @@ const dtpm = (dispatch) => ({
     deleteLesson: (lessonToDelete) => {
         lessonService.deleteLesson(lessonToDelete._id)
             .then(status => dispatch({type: "DELETE_LESSON", lessonToDelete: lessonToDelete}))
-    }
+    },
+    clearLessons: (lessons) => dispatch({
+        type: "CLEAR_LESSONS", lessons: lessons
+    })
 })
 
 export default connect(stpm, dtpm)(LessonTabs)

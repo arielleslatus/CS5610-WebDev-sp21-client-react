@@ -5,40 +5,39 @@ import {useParams} from 'react-router-dom'
 import topicService, {createTopic} from '../../services/topic-service'
 
 
-const TopicPills = ({topics = [],
+const TopicPills = ({topics,
                         createTopic,
                         findTopicsForLesson,
                         updateTopic,
-                        deleteTopic
+                        deleteTopic,
+                        clearTopics
                     }) => {
 
     const {layout, courseId, moduleId, lessonId, topicId} = useParams();
     useEffect(() => {
-        if (lessonId !== "undefined" && typeof lessonId !== "undefined") {
+        if (moduleId !== undefined && typeof moduleId !== undefined &&
+            lessonId !== undefined && typeof lessonId !== undefined) {
             findTopicsForLesson(lessonId)
+        } else {
+            clearTopics(topics)
         }
-    }, [lessonId])
+    }, [moduleId, lessonId])
     return (
-        <div>
+        <div className="ats-topic-pills">
             <h2>Topic Pills</h2>
-            <ul>
-                <li>layout: {layout}</li>
-                <li>course id: {courseId}</li>
-                <li>module id: {moduleId}</li>
-                <li>lesson id: {lessonId}</li>
-            </ul>
             <ul className="nav nav-pills">
                 {
                     topics.map(topic =>
-                                    <li className="nav-item">
+                                    <li className="nav-item"
+                                        key={topic._id}>
                                         <EditableItem
-                                            key={topic._id}
                                             to = {`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lessonId}/topics/${topic._id}`}
                                             updateItem={updateTopic}
                                             deleteItem={deleteTopic}
                                             active={topic._id === topicId}
                                             item={topic}/>
                                     </li>
+
                     )
                 }
                 <li>
@@ -71,8 +70,9 @@ const dtpm = (dispatch) => ({
     },
     deleteTopic: (topicToDelete) => {
         topicService.deleteTopic(topicToDelete._id)
-            .then(status => dispatch({type: "DELETE_TOPICS", topicToDelete: topicToDelete}))
-    }
+            .then(status => dispatch({type: "DELETE_TOPIC", topicToDelete: topicToDelete}))
+    },
+    clearTopics: (topics) => dispatch({type: "CLEAR_TOPICS", topics: topics})
 })
 
 export default connect(stpm, dtpm)(TopicPills)

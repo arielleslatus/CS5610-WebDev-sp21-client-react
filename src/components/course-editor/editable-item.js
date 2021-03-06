@@ -11,15 +11,15 @@ const EditableItem = ({item,
     const [itemCache, setItemCache] = useState(item)
 
     return(
-        <>
+        <div className="ats-editable-item">
             {
                 !editing &&
                 <>
                     <Link className={`nav-link ${active ? 'active' : '' }`} to={to}>
                         {item.title}
+                        <i onClick={() => setEditing(true)}
+                           className="fas fa-edit ats-edit-icon"></i>
                     </Link>
-                    <i onClick={() => setEditing(true)}
-                       className="fas fa-edit"></i>
                 </>
             }
             {
@@ -31,12 +31,12 @@ const EditableItem = ({item,
                     <i onClick={() => {
                         setEditing(false)
                         updateItem(itemCache)}}
-                       className="fas fa-check"></i>
+                       className="fas fa-check ats-edit-icon"></i>
                     <i onClick={() => deleteItem(item)}
-                       className="fas fa-times"></i>
+                       className="fas fa-times ats-edit-icon"></i>
                 </>
             }
-        </>
+        </div>
     )
 }
 

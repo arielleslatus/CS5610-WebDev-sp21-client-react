@@ -3,6 +3,8 @@ import {connect, Provider} from 'react-redux'
 import EditableItem from "./editable-item";
 import {useParams} from 'react-router-dom'
 import moduleService from "../../services/module-service";
+import './course-editor.template.client.css'
+import '../component-style.css'
 
 const ModuleList = ({modules = [],
                         createModule,
@@ -16,20 +18,21 @@ const ModuleList = ({modules = [],
         findModulesForCourse(courseId)
     }, [])
     return (
-        <div>
-            <h2>Module List</h2>
+        <div className="ats-modules-list">
+            <h2>Modules</h2>
 
             <ul className="list-group">
                 {
                     modules.map(module =>
-                                    <li className={`list-group-item ${module._id === moduleId ? 'active' : ''}`}>
+                                    <li className={`list-group-item ${module._id === moduleId ? 'active' : ''}`}
+                                        key={module._id}>
                                         <EditableItem
-                                            key={module._id}
                                             to = {`/courses/${layout}/edit/${courseId}/modules/${module._id}`}
                                             updateItem={updateModule}
                                             deleteItem={deleteModule}
                                             active={module._id === moduleId}
                                             item={module}/>
+
                                     </li>
                     )
                 }
