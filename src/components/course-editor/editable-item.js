@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 const EditableItem = ({item,
                       updateItem,
                       deleteItem,
+                      active=false,
                       to}) => {
 
     const [editing, setEditing] = useState(false)
@@ -14,7 +15,7 @@ const EditableItem = ({item,
             {
                 !editing &&
                 <>
-                    <Link to={to}>
+                    <Link className={`nav-link ${active ? 'active' : '' }`} to={to}>
                         {item.title}
                     </Link>
                     <i onClick={() => setEditing(true)}

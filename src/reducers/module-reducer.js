@@ -1,5 +1,3 @@
-import {updateCourse} from "../services/course-service";
-
 const initialState = {
     modules: []
 }
