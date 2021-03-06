@@ -75,4 +75,15 @@
 .ats-edit-icon {
     padding-left: 10px;
     float: right;
+
+}
+
+.nav-link.active {
+    background-color: darkslateblue !important;
+    color: whitesmoke !important;
+}
+
+.list-group-item.active {
+    background-color: darkslateblue !important;
+    color: whitesmoke !important;
 }

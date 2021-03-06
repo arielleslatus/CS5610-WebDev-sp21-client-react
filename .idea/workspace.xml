@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.template.client.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.template.client.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/editable-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/editable-item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/module-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/module-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/lesson-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/lesson-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/topic-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/topic-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
