@@ -3,14 +3,17 @@ import {Link, useParams} from "react-router-dom";
 import '../component-style.css'
 import ModuleReducer from "../../reducers/module-reducer";
 import LessonReducer from "../../reducers/lesson-reducer";
+import TopicReducer from "../../reducers/topic-reducer";
 import {Provider} from "react-redux";
 import ModuleList from "./module-list";
 import LessonTabs from "./lesson-tabs";
 import {combineReducers, createStore} from "redux";
+import TopicPills from "./topic-pills";
 
 const reducer = combineReducers({
                                     moduleReducer: ModuleReducer,
-                                    lessonReducer: LessonReducer
+                                    lessonReducer: LessonReducer,
+                                    topicReducer: TopicReducer
 
                                 })
 
@@ -34,6 +37,7 @@ const CourseEditor = () => {
                 </div>
                 <div className="col-9">
                     <LessonTabs/>
+                    <TopicPills/>
                 </div>
             </div>
         </Provider>

@@ -4,8 +4,7 @@ import EditableItem from "./editable-item";
 import {useParams} from 'react-router-dom'
 import moduleService from "../../services/module-service";
 
-const ModuleList = ({
-                        modules = [],
+const ModuleList = ({modules = [],
                         createModule,
                         findModulesForCourse,
                         updateModule,

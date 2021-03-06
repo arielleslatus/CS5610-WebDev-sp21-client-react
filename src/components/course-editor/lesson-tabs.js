@@ -21,12 +21,6 @@ const LessonTabs = ({lessons = [],
     return (
         <div>
             <h2>Lesson Tabs</h2>
-            <ul>
-                <li>layout: {layout}</li>
-                <li>course id: {courseId}</li>
-                <li>module id: {moduleId}</li>
-                <li>lesson id: {lessonId}</li>
-            </ul>
             <ul className="nav nav-tabs">
                 {
                     lessons.map(lesson =>
