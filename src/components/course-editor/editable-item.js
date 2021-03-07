@@ -34,9 +34,9 @@ const EditableItem = ({item,
                     <i onClick={() => {
                         setEditing(false)
                         updateItem(itemCache)}}
-                       className="fas fa-check ats-edit-icon"></i>
+                       className="fas fa-check ats-editing-icon"></i>
                     <i onClick={() => deleteItem(item)}
-                       className="fas fa-times ats-edit-icon"></i>
+                       className="fas fa-times ats-editing-icon"></i>
                 </>
             }
         </div>

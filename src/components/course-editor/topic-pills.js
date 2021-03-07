@@ -19,7 +19,7 @@ const TopicPills = ({topics = [],
             lessonId !== undefined && typeof lessonId !== undefined) {
             findTopicsForLesson(lessonId)
         } else {
-            clearTopics(topics)
+            clearTopics()
         }
     }, [moduleId, lessonId])
     return (
@@ -56,8 +56,10 @@ const stpm = (state) => {
 
 const dtpm = (dispatch) => ({
     createTopic: (lessonId) => {
-        topicService.createTopic(lessonId, {title: 'New Topic'})
-            .then(topic => dispatch({type: "CREATE_TOPIC", topic: topic}))
+            if (lessonId !== undefined) {
+                topicService.createTopic(lessonId, {title: 'New Topic'})
+                    .then(topic => dispatch({type: "CREATE_TOPIC", topic: topic}))
+            }
     },
     findTopicsForLesson: (lessonId) => {
         topicService.findTopicsForLesson(lessonId)
@@ -71,7 +73,7 @@ const dtpm = (dispatch) => ({
         topicService.deleteTopic(topicToDelete._id)
             .then(status => dispatch({type: "DELETE_TOPIC", topicToDelete: topicToDelete}))
     },
-    clearTopics: (topics) => dispatch({type: "CLEAR_TOPICS", topics: topics})
+    clearTopics: () => dispatch({type: "CLEAR_TOPICS"})
 })
 
 export default connect(stpm, dtpm)(TopicPills)

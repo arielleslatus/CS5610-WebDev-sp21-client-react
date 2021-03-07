@@ -21,8 +21,7 @@ const LessonTabs = ({lessons,
         if (moduleId !== undefined && typeof moduleId !== undefined) {
             findLessonsForModule(moduleId)
         } else {
-            findLessonsForModule(undefined)
-            //clearLessons(lessons)
+            clearLessons()
         }
     }, [moduleId, lessons])
     return (
@@ -61,8 +60,10 @@ const stpm = (state) => {
 
 const dtpm = (dispatch) => ({
     createLesson: (moduleId) => {
-        lessonService.createLesson(moduleId, {title: 'New Lesson'})
-            .then(lesson => dispatch({type: "CREATE_LESSON", lesson: lesson}))
+        if (moduleId !== undefined) {
+            lessonService.createLesson(moduleId, {title: 'New Lesson'})
+                .then(lesson => dispatch({type: "CREATE_LESSON", lesson: lesson}))
+        }
     },
     findLessonsForModule: (moduleId) => {
         lessonService.findLessonsForModule(moduleId)
@@ -76,9 +77,10 @@ const dtpm = (dispatch) => ({
         lessonService.deleteLesson(lessonToDelete._id)
             .then(status => dispatch({type: "DELETE_LESSON", lessonToDelete: lessonToDelete}))
     },
-    clearLessons: (lessons) => dispatch({
-        type: "CLEAR_LESSONS", lessons: lessons
-    })
+    clearLessons: () => {
+        dispatch({type: "CLEAR_LESSONS"})
+        dispatch({type: "CLEAR_TOPICS"})
+    }
 })
 
 export default connect(stpm, dtpm)(LessonTabs)
