@@ -25,7 +25,7 @@ const TopicPills = ({topics = [],
     return (
         <div className="ats-topic-pills">
             <h2>Topic Pills</h2>
-            <ul className="nav nav-pills">
+            <ul className="nav nav-pills ats-unordered-pills">
                 {
                     topics.map(topic =>
                                     <li className="nav-item"
@@ -35,7 +35,8 @@ const TopicPills = ({topics = [],
                                             updateItem={updateTopic}
                                             deleteItem={deleteTopic}
                                             active={topic._id === topicId}
-                                            item={topic}/>
+                                            item={topic}
+                                            isModule={false}/>
                                     </li>
 
                     )

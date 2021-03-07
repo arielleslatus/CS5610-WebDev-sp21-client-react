@@ -53,6 +53,7 @@
     color: darkslateblue;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-bottom: solid lightgrey;
 }
 
 .ats-topic-pills {
@@ -62,8 +63,11 @@
 }
 
 .ats-editable-item {
-    margin: 0 auto;
+    margin: auto;
     text-align: left;
+    margin: 1px;
+    vertical-align: center;
+    font-weight: bold;
 }
 
 .ats-edit-icon {
@@ -74,6 +78,7 @@
 .ats-editing-icon {
     padding: 10px;
     float: right;
+    background-color: darkslateblue;
 }
 
 .nav-item .nav-link.active {
@@ -89,4 +94,16 @@
 .ats-course-title {
     text-align: center;
     font-weight: bold;
+    font-size: x-large;
+}
+
+.ats-nav-item {
+}
+
+.ats-item-title {
+    margin: 1px;
+}
+
+.ats-unordered-pills {
+    margin-top: 30px;
 }

@@ -5,7 +5,8 @@ const EditableItem = ({item,
                       updateItem,
                       deleteItem,
                       active=false,
-                      to}) => {
+                      to,
+                      isModule=false}) => {
 
     const [editing, setEditing] = useState(false)
     const [itemCache, setItemCache] = useState(item)
@@ -16,7 +17,7 @@ const EditableItem = ({item,
                 !editing &&
                 <>
                     <Link className={`nav-link ${active ? 'active' : '' }`} to={to}>
-                        <label>{item.title}</label>
+                        <label className="ats-item-title">{item.title}</label>
                         <i onClick={() => setEditing(true)}
                            className="fas fa-edit ats-edit-icon"></i>
                     </Link>
@@ -24,20 +25,27 @@ const EditableItem = ({item,
             }
             {
                 editing &&
-                <>
+                <div className={`${isModule ? '' : 'form-inline'}`}>
 
-                    <input
-                        type="text"
-                        onChange={(e) => setItemCache({...itemCache, title: e.target.value})}
-                        value={itemCache.title}
-                        className="form-control ats-edit-title"/>
-                    <i onClick={() => {
-                        setEditing(false)
-                        updateItem(itemCache)}}
-                       className="fas fa-check ats-editing-icon"></i>
-                    <i onClick={() => deleteItem(item)}
-                       className="fas fa-times ats-editing-icon"></i>
-                </>
+                    <div className={`nav-link  ${active ? 'active' : '' }`}>
+                        <input
+                            type="text"
+                            onChange={(e) => setItemCache({...itemCache, title: e.target.value})}
+                            value={itemCache.title}
+                            className="form-control ats-edit-title"/>
+
+
+                            <i onClick={() => {
+                                setEditing(false)
+                                updateItem(itemCache)}}
+                               className="fas fa-check ats-editing-icon"></i>
+                            <i onClick={() => deleteItem(item)}
+                               className="fas fa-times ats-editing-icon"></i>
+
+                    </div>
+
+
+                </div>
             }
         </div>
     )

@@ -33,7 +33,8 @@ const ModuleList = ({modules = [],
                                             updateItem={updateModule}
                                             deleteItem={deleteModule}
                                             active={module._id === moduleId}
-                                            item={module}/>
+                                            item={module}
+                                            isModule={true}/>
 
                                     </li>
                     )
