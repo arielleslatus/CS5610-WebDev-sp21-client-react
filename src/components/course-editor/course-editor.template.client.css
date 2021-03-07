@@ -1,5 +1,5 @@
 .nav {
-    margin-bottom: -11px;
+    margin-bottom: -10px;
 }
 
 .nav-item {
@@ -11,36 +11,12 @@
     background-color: lightgrey;
 }
 
-.ats-pills-content-area {
-    padding: 0px 15px;
-}
-
 .list-group-item {
     margin: 20px;
     padding: 20px;
     border-radius: 5px;
     background-color: white;
     color: slategrey;
-}
-
-
-
-.list-group-item:first-child {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.list-group-item:last-child {
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-
-.ats-pill {
-    background-color: lightgrey;
-    border-radius: 5px;
-    margin: 20px;
-    text-align: center;
 }
 
 .ats-back-button {
@@ -63,19 +39,16 @@
     color: darkslateblue;
     padding-top: 20px;
     padding-bottom: 20px;
-
 }
 
 .ats-editable-item {
     margin: 0 auto;
     text-align: left;
-
 }
 
 .ats-edit-icon {
     padding-left: 10px;
     float: right;
-
 }
 
 .nav-link.active {

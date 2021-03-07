@@ -1,0 +1,27 @@
+.ats-sticky-list-bar {
+    color: darkslategrey;
+    background-color: lightgrey;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 54px;
+    z-index: 1;
+}
+
+.ats-sub-nav-bar-icon {
+    padding-right: 10px;
+    padding-top: 10px;
+    color: darkslategray;
+}
+
+.ats-horizontal-row {
+    margin: 0 auto;
+}
+
+.ats-floating-plus-icon {
+    color: darkslateblue;
+    top: 750px;
+    position: fixed;
+    right: 100px;
+}

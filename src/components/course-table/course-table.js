@@ -11,7 +11,7 @@ class CourseTable extends React.Component{
 
     render() {
         return (
-            <div className="ats-list-area" >
+            <div className="ats-table-area" >
                 {
                     this.props.courses.map(course => <CourseRow
                         key={course._id}

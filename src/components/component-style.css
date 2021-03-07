@@ -23,36 +23,8 @@
     align-self: center;
 }
 
-.ats-login-sign-up-box {
-    background-color: lightgrey;
-    padding: 70px 100px;
-    border-radius: 5px;
-    color: darkslategrey;
-}
-
-.ats-center-heading {
-    text-align: center;
-}
-
 .ats-fill {
     min-height: 100vh;
-}
-
-.ats-button {
-    background-color: darkslateblue;
-    color: whitesmoke;
-}
-
-.ats-td-vertical-align-middle {
-    vertical-align: middle;
-}
-
-.ats-align-center-horizontal {
-    margin: 0 auto;
-}
-
-.ats-icon-cell-fixed-width {
-    width: 100px;
 }
 
 

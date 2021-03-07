@@ -1,10 +1,11 @@
 import React from 'react'
 import {Link} from "react-router-dom";
+import './course-manager.template.client.css'
 import '../component-style.css'
 
 const SubNavBarTable = () =>
     <thead className=" row container-xxl ats-sticky-list-bar">
-        <tr className="row container-lg flex-nowrap ats-align-center-horizontal">
+        <tr className="row container-lg flex-nowrap ats-horizontal-row">
             <th scope="col" className="col-lx-4 col-lg-4 col-md-7 col-sm-6 col-xs-11">Title</th>
             <th scope="col" className="col-xl-3 col-lg-3 col-md-3 col-sm-3 d-none d-sm-table-cell">Owned by</th>
             <th scope="col" className="col-xl-3 col-lg-3 d-none d-lg-table-cell">Last Modified</th>

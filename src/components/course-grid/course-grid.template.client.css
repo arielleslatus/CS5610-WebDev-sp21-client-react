@@ -1,0 +1,23 @@
+.ats-grid-area {
+    padding-top: 109px;
+    margin: 0 auto;
+}
+
+.ats-card {
+    padding-top: 10px;
+}
+
+.ats-card-icon {
+    padding-right: 10px;
+    padding-top: 10px;
+    color: slategrey;
+}
+
+.ats-card-title {
+    color: darkslategray;
+    font-weight: bold;
+}
+
+.ats-edit-mode-title {
+    color: slategrey;
+}
