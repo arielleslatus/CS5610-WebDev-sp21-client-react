@@ -72,13 +72,23 @@
 
 .ats-edit-icon {
     padding-left: 10px;
+    padding-top: 3px;
     float: right;
+    margin: 0 auto;
 }
 
 .ats-editing-icon {
     padding: 10px;
     float: right;
-    background-color: darkslateblue;
+}
+
+.ats-plus-icon {
+    padding-top: 5px;
+}
+
+.nav-link.active {
+    background-color: darkslateblue !important;
+    color: whitesmoke !important;
 }
 
 .nav-item .nav-link.active {

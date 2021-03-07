@@ -46,7 +46,7 @@ const LessonTabs = ({lessons = [],
                 }
                 <li>
                     <i onClick={() => createLesson(moduleId)}
-                       className="fas fa-plus"></i>
+                       className="fas fa-plus fa-2x ats-plus-icon"></i>
                 </li>
             </ul>
         </div>
