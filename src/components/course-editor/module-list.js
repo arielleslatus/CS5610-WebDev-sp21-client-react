@@ -3,6 +3,8 @@ import {connect, Provider} from 'react-redux'
 import EditableItem from "./editable-item";
 import {useParams} from 'react-router-dom'
 import moduleService from "../../services/module-service";
+import lessonService from "../../services/lesson-service"
+import topicService from "../../services/topic-service"
 import './course-editor.template.client.css'
 import '../component-style.css'
 

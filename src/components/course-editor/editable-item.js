@@ -25,9 +25,12 @@ const EditableItem = ({item,
             {
                 editing &&
                 <>
+
                     <input
+                        type="text"
                         onChange={(e) => setItemCache({...itemCache, title: e.target.value})}
-                        value={itemCache.title}/>
+                        value={itemCache.title}
+                        className="form-control ats-edit-title"/>
                     <i onClick={() => {
                         setEditing(false)
                         updateItem(itemCache)}}

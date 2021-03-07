@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import EditableItem from "./editable-item";
 import {useParams} from 'react-router-dom'
 import lessonService from '../../services/lesson-service'
+import topicService from "../../services/topic-service";
 
 
 const LessonTabs = ({lessons,
@@ -20,7 +21,8 @@ const LessonTabs = ({lessons,
         if (moduleId !== undefined && typeof moduleId !== undefined) {
             findLessonsForModule(moduleId)
         } else {
-            clearLessons(lessons)
+            findLessonsForModule(undefined)
+            //clearLessons(lessons)
         }
     }, [moduleId, lessons])
     return (
