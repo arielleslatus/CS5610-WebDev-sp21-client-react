@@ -99,6 +99,7 @@
 .list-group-item.active {
     background-color: darkslateblue !important;
     color: whitesmoke !important;
+    margin-top: 15px !important;
 }
 
 .ats-course-title {
