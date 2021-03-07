@@ -85,3 +85,8 @@
     background-color: darkslateblue !important;
     color: whitesmoke !important;
 }
+
+.ats-course-title {
+    text-align: center;
+    font-weight: bold;
+}

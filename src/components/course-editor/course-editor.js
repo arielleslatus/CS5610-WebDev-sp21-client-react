@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link, useParams} from "react-router-dom";
 import './course-editor.template.client.css'
 import '../component-style.css'
@@ -10,6 +10,7 @@ import ModuleList from "./module-list";
 import LessonTabs from "./lesson-tabs";
 import {combineReducers, createStore} from "redux";
 import TopicPills from "./topic-pills";
+import courseService from "../../services/course-service"
 
 const reducer = combineReducers({
                                     moduleReducer: ModuleReducer,
@@ -22,8 +23,19 @@ const store = createStore(reducer)
 
 
 
+
+
 const CourseEditor = () => {
     const {layout, courseId, moduleId, lessonId, topicId} = useParams();
+
+    const [inputTitle, setTitle] = useState(null)
+
+
+    useEffect(() => {
+        courseService.findCourseById(courseId)
+        .then(course => setTitle(course.title))
+    }, [courseId])
+
 
     return (
         <Provider store={store}>
@@ -32,12 +44,16 @@ const CourseEditor = () => {
 
             <div className="container-xxl">
                 <div className="ats-sticky-nav-bar row">
-                    <Link to={`/courses/${layout}`}>
+                    <Link to={`/courses/${layout}`} className="col-lg-1 col-md-1 col-sm-1 col-xs-1">
                         <i className="fas fa-times fa-2x col-1 ats-back-button"></i>
                     </Link>
-                    <div className="col-4 ats-vertical-align">
+                    <div className="col-lg-2 d-none d-lg-block ats-vertical-align">
                         Course Editor
                     </div>
+                    <div className="col-lg-6 col-md-9 col-sm-9 col-xs-9 ats-course-title">
+                        {inputTitle}
+                    </div>
+                    <div className="col-lg-3 col-md-2 col-sm-2 col-xs-2"></div>
                 </div>
 
                 <div className="container-lg">

@@ -11,7 +11,7 @@ import CourseEditor from "../course-editor/course-editor";
 
 class CourseManager extends React.Component {
     state = {
-        courses: [],
+        courses: []
     }
 
     componentDidMount() {
@@ -77,7 +77,7 @@ class CourseManager extends React.Component {
                                    placeholder="New Course Name"
                                    onChange={(e) => this.setState({newCourseTitle: e.target.value})}
                                    value={this.state.newCourseTitle}
-                                   className=" ats-new-course-fld form-control" />
+                                   className="ats-new-course-fld form-control" />
                         </div>
                         <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1">
                             <i onClick={this.addCourse}
