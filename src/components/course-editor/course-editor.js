@@ -51,10 +51,13 @@ const CourseEditor = () => {
                     <div className="container-lg">
                         <div className="row ats-page-body ats-fill">
                             <div className="col-3 ats-list-area">
+                                <h2 className="ats-lessons-topics-title">Modules</h2>
                                 <ModuleList/>
                             </div>
                             <div className="col-9 ">
+                                <h2 className="ats-lessons-topics-title">Lessons</h2>
                                 <LessonTabs/>
+                                <h2 className="ats-lessons-topics-title">Topics</h2>
                                 <TopicPills/>
                             </div>
                         </div>

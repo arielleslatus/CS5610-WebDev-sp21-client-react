@@ -23,12 +23,10 @@ const TopicPills = ({topics = [],
         }
     }, [moduleId, lessonId])
     return (
-        <div className="ats-topic-pills">
-            <h2>Topic Pills</h2>
             <ul className="nav nav-pills ats-unordered-pills">
                 {
                     topics.map(topic =>
-                                    <li className="nav-item"
+                                    <li className="nav-item ats-nav-item"
                                         key={topic._id}>
                                         <EditableItem
                                             to = {`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lessonId}/topics/${topic._id}`}
@@ -41,12 +39,11 @@ const TopicPills = ({topics = [],
 
                     )
                 }
-                <li>
+                <li className="ats-nav-item">
                     <i onClick={() => createTopic(lessonId)}
                        className="fas fa-plus fa-2x ats-plus-icon"></i>
                 </li>
             </ul>
-        </div>
     )
 }
 

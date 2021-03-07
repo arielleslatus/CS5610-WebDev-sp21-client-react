@@ -20,10 +20,7 @@ const ModuleList = ({modules = [],
         findModulesForCourse(courseId)
     }, [])
     return (
-        <div className="ats-modules-list">
-            <h2>Modules</h2>
-
-            <ul className="list-group">
+            <ul className="list-group ats-modules-list">
                 {
                     modules.map(module =>
                                     <li className={`list-group-item ${module._id === moduleId ? 'active' : ''}`}
@@ -39,12 +36,11 @@ const ModuleList = ({modules = [],
                                     </li>
                     )
                 }
-                <li className="list-group-item">
+                <li className="list-group-item ats-list-group-item">
                     <i onClick={() => createModule(courseId)}
-                       className="fas fa-plus fa-2x"></i>
+                       className="fas fa-plus fa-2x ats-module-plus-icon"></i>
                 </li>
             </ul>
-        </div>
     )
 }
 const stpm = (state) => ({

@@ -32,22 +32,19 @@
 }
 
 .list-group-item {
-    margin: 20px;
-    padding: 20px;
+    margin: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
     border-radius: 5px;
     background-color: white;
     color: slategrey;
+    font-size: large;
 }
 
 .ats-back-button {
     color:whitesmoke;
 }
 
-.ats-modules-list {
-    color: darkslateblue;
-    text-align: center;
-    padding-top: 20px;
-}
+
 
 .ats-lesson-tabs {
     color: darkslateblue;
@@ -66,8 +63,8 @@
     margin: auto;
     text-align: left;
     margin: 1px;
-    vertical-align: center;
     font-weight: bold;
+
 }
 
 .ats-edit-icon {
@@ -86,6 +83,18 @@
     padding-top: 5px;
 }
 
+.ats-module-plus-icon {
+    align-content: center;
+}
+
+.ats-list-group-item {
+    padding-left: 105.75px;
+    padding-right: 105.75px;
+    padding-top: 14.5px;
+    padding-bottom: 14.5px;
+    margin: 10px auto;
+}
+
 .nav-link.active {
     background-color: darkslateblue !important;
     color: whitesmoke !important;
@@ -102,13 +111,14 @@
     margin-top: 15px !important;
 }
 
+.list-group-item:first-child {
+    margin-top: 10px;
+}
+
 .ats-course-title {
     text-align: center;
     font-weight: bold;
     font-size: x-large;
-}
-
-.ats-nav-item {
 }
 
 .ats-item-title {
@@ -116,5 +126,20 @@
 }
 
 .ats-unordered-pills {
-    margin-top: 30px;
+    margin: 20px;
+    color: darkslateblue;
+    border-bottom: solid lightgrey;
+}
+
+.ats-nav-item:first-child {
+    margin-left: 0px;
+}
+
+.ats-nav-item {
+    margin: 10px;
+}
+
+.ats-lessons-topics-title {
+    color: darkslateblue;
+    margin: 20px;
 }

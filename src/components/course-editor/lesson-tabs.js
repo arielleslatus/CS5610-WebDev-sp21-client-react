@@ -27,8 +27,6 @@ const LessonTabs = ({lessons = [],
         }
     }, [moduleId, lessons])
     return (
-        <div className="ats-lesson-tabs">
-            <h2>Lesson Tabs</h2>
             <ul className="nav nav-pills ats-unordered-pills">
                 {
                     lessons.map(lesson =>
@@ -44,12 +42,12 @@ const LessonTabs = ({lessons = [],
                                     </li>
                     )
                 }
-                <li>
+                <li className="ats-nav-item">
                     <i onClick={() => createLesson(moduleId)}
                        className="fas fa-plus fa-2x ats-plus-icon"></i>
                 </li>
             </ul>
-        </div>
+
     )
 }
 
