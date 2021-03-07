@@ -16,7 +16,7 @@ const EditableItem = ({item,
                 !editing &&
                 <>
                     <Link className={`nav-link ${active ? 'active' : '' }`} to={to}>
-                        {item.title}
+                        <label>{item.title}</label>
                         <i onClick={() => setEditing(true)}
                            className="fas fa-edit ats-edit-icon"></i>
                     </Link>

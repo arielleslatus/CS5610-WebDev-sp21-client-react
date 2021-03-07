@@ -6,7 +6,7 @@ import lessonService from '../../services/lesson-service'
 import topicService from "../../services/topic-service";
 
 
-const LessonTabs = ({lessons,
+const LessonTabs = ({lessons = [],
                         createLesson,
                         findLessonsForModule,
                         updateLesson,
@@ -22,6 +22,8 @@ const LessonTabs = ({lessons,
             findLessonsForModule(moduleId)
         } else {
             clearLessons()
+            //findLessonsForModule(undefined)
+
         }
     }, [moduleId, lessons])
     return (
@@ -66,8 +68,10 @@ const dtpm = (dispatch) => ({
         }
     },
     findLessonsForModule: (moduleId) => {
-        lessonService.findLessonsForModule(moduleId)
-            .then(lessons => dispatch({type: "FIND_LESSONS_FOR_MODULE", lessons: lessons}))
+        if (moduleId !== undefined) {
+            lessonService.findLessonsForModule(moduleId)
+                .then(lessons => dispatch({type: "FIND_LESSONS_FOR_MODULE", lessons: lessons}))
+        }
     },
     updateLesson: (newItem) => {
         lessonService.updateLesson(newItem._id, newItem)
