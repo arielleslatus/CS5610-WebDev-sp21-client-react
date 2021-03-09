@@ -88,10 +88,7 @@
 }
 
 .ats-list-group-item {
-    padding-left: 105.75px;
-    padding-right: 105.75px;
-    padding-top: 14.5px;
-    padding-bottom: 14.5px;
+    padding: 15px 106px;
     margin: 10px auto;
 }
 

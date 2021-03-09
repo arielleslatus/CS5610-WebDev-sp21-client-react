@@ -26,17 +26,14 @@ const TopicPills = ({topics = [],
             <ul className="nav nav-pills ats-unordered-pills">
                 {
                     topics.map(topic =>
-                                    <li className="nav-item ats-nav-item"
-                                        key={topic._id}>
                                         <EditableItem
+                                            key={topic._id}
                                             to = {`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lessonId}/topics/${topic._id}`}
                                             updateItem={updateTopic}
                                             deleteItem={deleteTopic}
-                                            active={topic._id === topicId}
                                             item={topic}
-                                            isModule={false}/>
-                                    </li>
-
+                                            itemId={topicId}
+                                            type={"topic"}/>
                     )
                 }
                 <li className="ats-nav-item">

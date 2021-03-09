@@ -1,33 +1,39 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 
-const EditableItem = ({item,
+const EditableItem = ({item, itemId="",
                       updateItem,
                       deleteItem,
-                      active=false,
                       to,
-                      isModule=false}) => {
+                      type=""}) => {
 
     const [editing, setEditing] = useState(false)
     const [itemCache, setItemCache] = useState(item)
 
     return(
-        <div className="ats-editable-item">
+        <li className={`ats-editable-item 
+            ${type === 'module' ? 'list-group-item' : 'nav-item ats-nav-item'}
+            ${item._id === itemId ? 'active' : '' }
+            ${editing ? 'active' : ''}
+            `}>
             {
                 !editing &&
-                <>
-                    <Link className={`nav-link ${active ? 'active' : '' }`} to={to}>
+                <div className="nav-link">
+                    <Link to={to}>
+
                         <label className="ats-item-title">{item.title}</label>
-                        <i onClick={() => setEditing(true)}
-                           className="fas fa-edit ats-edit-icon float-right"></i>
+
                     </Link>
-                </>
+
+                    <i onClick={() => setEditing(true)}
+                       className="fas fa-edit ats-edit-icon float-right"></i>
+
+                </div>
             }
             {
                 editing &&
-                <div className={`${isModule ? '' : 'form-inline'}`}>
+                    <div className="nav-link">
 
-                    <div className={`nav-link  ${active ? 'active' : '' }`}>
                         <input
                             type="text"
                             onChange={(e) => setItemCache({...itemCache, title: e.target.value})}
@@ -45,9 +51,8 @@ const EditableItem = ({item,
                     </div>
 
 
-                </div>
             }
-        </div>
+        </li>
     )
 }
 

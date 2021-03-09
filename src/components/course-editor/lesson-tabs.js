@@ -30,16 +30,14 @@ const LessonTabs = ({lessons = [],
             <ul className="nav nav-pills ats-unordered-pills">
                 {
                     lessons.map(lesson =>
-                                    <li key={lesson._id}
-                                        className="nav-item ats-nav-item">
                                         <EditableItem
+                                            key={lesson._id}
                                             to = {`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lesson._id}`}
                                             updateItem={updateLesson}
                                             deleteItem={deleteLesson}
-                                            active={lesson._id === lessonId}
                                             item={lesson}
-                                            isModule={false}/>
-                                    </li>
+                                            itemId={lessonId}
+                                            type={"lesson"}/>
                     )
                 }
                 <li className="ats-nav-item">

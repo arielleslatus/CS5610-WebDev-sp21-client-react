@@ -23,17 +23,14 @@ const ModuleList = ({modules = [],
             <ul className="list-group ats-modules-list">
                 {
                     modules.map(module =>
-                                    <li className={`list-group-item ${module._id === moduleId ? 'active' : ''}`}
-                                        key={module._id}>
                                         <EditableItem
+                                            key={module._id}
                                             to = {`/courses/${layout}/edit/${courseId}/modules/${module._id}`}
                                             updateItem={updateModule}
                                             deleteItem={deleteModule}
-                                            active={module._id === moduleId}
                                             item={module}
-                                            isModule={true}/>
-
-                                    </li>
+                                            itemId={moduleId}
+                                            type={"module"}/>
                     )
                 }
                 <li className="list-group-item ats-list-group-item">
