@@ -13,6 +13,7 @@ import CounterRedux from "./components/counter/redux-state/counter-redux";
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <div>Whiteboard</div>
   </React.StrictMode>,
   document.getElementById('root')
 );
