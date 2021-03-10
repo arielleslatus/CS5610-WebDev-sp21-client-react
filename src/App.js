@@ -1,6 +1,7 @@
 import React from 'react'
 import CourseManager from "./components/course-manager/course-manager";
 import CourseEditor from "./components/course-editor/course-editor";
+import Home from "./components/home";
 import { BrowserRouter, Link } from "react-router-dom";
 import { Route, Switch } from "react-router-dom";
 import './components/component-style.css';
@@ -13,7 +14,7 @@ function App() {
       <BrowserRouter>
 
           <Switch>
-
+              <Route path="/" exact={true}  component={Home}/>
               <Route path={["/courses/:layout/edit/:courseId",
                             "/courses/:layout/edit/:courseId/modules/:moduleId",
                             "/courses/:layout/edit/:courseId/modules/:moduleId/lessons/:lessonId",
