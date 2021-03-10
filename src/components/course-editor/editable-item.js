@@ -32,21 +32,29 @@ const EditableItem = ({item, itemId="",
             }
             {
                 editing &&
-                    <div className="nav-link">
+                    <div className="nav-link container">
+                        <div className="row ats-edit-row">
+                            <input
+                                type="text"
+                                onChange={(e) => setItemCache({...itemCache, title: e.target.value})}
+                                value={itemCache.title}
+                                className="form-control ats-edit-title col-8"/>
+                            <div className="d-flex justify-content-center col-2">
+                                <i onClick={() => deleteItem(item)}
+                                   className="fas fa-times ats-editing-icon"></i>
+                            </div>
+                            <div className="d-flex justify-content-center col-2">
+                                <i onClick={() => {
+                                    setEditing(false)
+                                    updateItem(itemCache)}}
+                                   className="fas fa-check ats-editing-icon"></i>
+                            </div>
+                        </div>
 
-                        <input
-                            type="text"
-                            onChange={(e) => setItemCache({...itemCache, title: e.target.value})}
-                            value={itemCache.title}
-                            className="form-control ats-edit-title"/>
 
 
-                            <i onClick={() => {
-                                setEditing(false)
-                                updateItem(itemCache)}}
-                               className="fas fa-check ats-editing-icon"></i>
-                            <i onClick={() => deleteItem(item)}
-                               className="fas fa-times ats-editing-icon"></i>
+
+
 
                     </div>
 

@@ -142,3 +142,8 @@
     color: darkslateblue;
     margin: 20px;
 }
+
+.ats-edit-row {
+    padding-left: 5px;
+    padding-right: 5px;
+}
