@@ -88,14 +88,18 @@
     margin: 10px auto;
 }
 
-.nav-link.active {
+
+
+.nav-item.active {
     background-color: darkslateblue !important;
-    color: whitesmoke !important;
 }
 
-.nav-item .nav-link.active {
-    background-color: darkslateblue !important;
-    color: whitesmoke !important;
+.ats-link {
+    color: dimgrey;
+}
+
+.ats-link-active {
+    color: whitesmoke;
 }
 
 .list-group-item.active {

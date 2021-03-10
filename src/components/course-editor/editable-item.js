@@ -19,7 +19,7 @@ const EditableItem = ({item, itemId="",
             {
                 !editing &&
                 <div className="nav-link">
-                    <Link to={to}>
+                    <Link to={to} className={`${item._id === itemId ? 'ats-link-active' : 'ats-link'}`}>
 
                         <label className="ats-item-title">{item.title}</label>
 

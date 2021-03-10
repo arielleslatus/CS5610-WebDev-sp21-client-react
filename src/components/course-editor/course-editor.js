@@ -36,9 +36,12 @@ const CourseEditor = () => {
             <body>
                 <div className="container-xxl">
                     <div className="ats-sticky-nav-bar row">
-                        <Link to={`/courses/${layout}`} className="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                            <i className="fas fa-times fa-2x col-1 ats-back-button"></i>
-                        </Link>
+                        <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                            <Link to={`/courses/${layout}`} className="">
+                                <i className="fas fa-times fa-2x col-1 ats-back-button"></i>
+                            </Link>
+                        </div>
+
                         <div className="col-lg-2 d-none d-lg-block ats-vertical-align">
                             Course Editor
                         </div>
