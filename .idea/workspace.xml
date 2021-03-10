@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.template.client.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.template.client.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/editable-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/editable-item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/module-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/module-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +64,9 @@
       <workItem from="1614196391486" duration="15606000" />
       <workItem from="1614345453559" duration="12194000" />
       <workItem from="1614781055278" duration="5897000" />
-      <workItem from="1615299059257" duration="2156000" />
+      <workItem from="1615299059257" duration="2406000" />
+      <workItem from="1615382896256" duration="33000" />
+      <workItem from="1615391368188" duration="281000" />
     </task>
     <servers />
   </component>
@@ -77,14 +74,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="533" y="273" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615391594890">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="533" y="273" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1615391594890" />
     <state x="670" y="188" key="SettingsEditor" timestamp="1614264323821">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="670" y="188" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1614264323821" />
-    <state x="519" y="607" key="com.intellij.ide.util.TipDialog" timestamp="1615299060298">
+    <state x="519" y="607" key="com.intellij.ide.util.TipDialog" timestamp="1615391367752">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="519" y="607" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1615299060298" />
+    <state x="519" y="607" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1615391367752" />
     <state x="570" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1614199501205">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
