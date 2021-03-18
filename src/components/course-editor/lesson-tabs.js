@@ -22,8 +22,6 @@ const LessonTabs = ({lessons = [],
             findLessonsForModule(moduleId)
         } else {
             clearLessons()
-            //findLessonsForModule(undefined)
-
         }
     }, [moduleId, lessons])
     return (

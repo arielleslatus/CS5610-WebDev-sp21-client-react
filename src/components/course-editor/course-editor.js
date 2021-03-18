@@ -11,6 +11,7 @@ import LessonTabs from "./lesson-tabs";
 import {combineReducers, createStore} from "redux";
 import TopicPills from "./topic-pills";
 import courseService from "../../services/course-service"
+import WidgetList from "./widgets/widget-list";
 
 const reducer = combineReducers({
                                     moduleReducer: ModuleReducer,
@@ -54,14 +55,16 @@ const CourseEditor = () => {
                     <div className="container-lg">
                         <div className="row ats-page-body ats-fill">
                             <div className="col-3 ats-list-area">
-                                <h2 className="ats-lessons-topics-title">Modules</h2>
+                                <h2 className="ats-category-title">Modules</h2>
                                 <ModuleList/>
                             </div>
                             <div className="col-9 ">
-                                <h2 className="ats-lessons-topics-title">Lessons</h2>
+                                <h2 className="ats-category-title">Lessons</h2>
                                 <LessonTabs/>
-                                <h2 className="ats-lessons-topics-title">Topics</h2>
+                                <h2 className="ats-category-title">Topics</h2>
                                 <TopicPills/>
+                                <h2 className="ats-category-title">Widgets</h2>
+                                <WidgetList/>
                             </div>
                         </div>
                     </div>
