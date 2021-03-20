@@ -6,6 +6,7 @@ import '../course-editor.template.client.css'
 import '../../component-style.css'
 import {connect} from 'react-redux'
 import widgetActions from "../../actions/widget-actions";
+import EditableWidget from "./editable-widget";
 
 
 
@@ -35,46 +36,30 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
                     widgets.map(widget =>
 
                     <li key={widget.id} className="list-group-item">
-                        {
-                            currentWidget.id === widget.id &&
-                            <>
-                                <i onClick={() => deleteWidget(widget)}
-                                   className="fas fa-trash float-right">
 
-                                </i>
-                                <i onClick={() => {
-                                    setCurrentWidget({})
-                                    updateWidget(widget)}}
-                                   className="fas fa-check float-right">
-                                </i>
-                                <select onChange={(e) => setCurrentWidget(widget => ({...widget, type: e.target.value}))} className="form-control">
-                                    <option value="HEADING">Heading</option>
-                                    <option value="PARAGRAPH">Paragraph</option>
-                                </select>
-                            </>
-                        }
-                        {
-                            currentWidget.id !== widget.id &&
-                            <i onClick={() => setCurrentWidget(widget)}
-                               className="fas fa-cog fa-2x float-right">
+                        <EditableWidget
+                            key={widget.id}
+                            widget={widget}
+                            currentWidget={currentWidget}
+                            setCurrentWidget={setCurrentWidget}
+                            editing={currentWidget.id === widget.id}
+                            updateWidget={updateWidget}
+                            deleteWidget={deleteWidget}/>
 
-                            </i>
-                        }
-
-                        {
-                            widget.type === "HEADING" &&
-                            <HeadingWidget
-                                setCurrentWidget={setCurrentWidget}
-                                editing={currentWidget.id === widget.id}
-                                widget={widget}/>
-                        }
-                        {
-                            widget.type === "PARAGRAPH" &&
-                            <ParagraphWidget
-                                setCurrentWidget={setCurrentWidget}
-                                editing={currentWidget.id === widget.id}
-                                widget={currentWidget}/>
-                        }
+                        {/*{*/}
+                        {/*    widget.type === "HEADING" &&*/}
+                        {/*    <HeadingWidget*/}
+                        {/*        setCurrentWidget={setCurrentWidget}*/}
+                        {/*        editing={currentWidget.id === widget.id}*/}
+                        {/*        widget={widget}/>*/}
+                        {/*}*/}
+                        {/*{*/}
+                        {/*    widget.type === "PARAGRAPH" &&*/}
+                        {/*    <ParagraphWidget*/}
+                        {/*        setCurrentWidget={setCurrentWidget}*/}
+                        {/*        editing={currentWidget.id === widget.id}*/}
+                        {/*        widget={currentWidget}/>*/}
+                        {/*}*/}
                     </li>)
                 }
                 <li className="ats-nav-item list-group-item">

@@ -5,10 +5,10 @@ const ParagraphWidget = ({widget, setCurrentWidget, editing, key}) => {
         <div>
             {
                 editing &&
-                <textarea
-                    onChange={(e) => setCurrentWidget({...widget, text: e.target.value})}
-                    value={widget.text}
-                    className="form-control"></textarea>
+                <textarea onChange={(e) => setCurrentWidget({...widget, text: e.target.value})}
+                          defaultValue={widget.text}
+                          className="form-control"></textarea>
+
             }
             {
                 !editing &&
