@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/editable-widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widgets.template.client.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/editable-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/editable-widget.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -72,7 +72,7 @@
       <workItem from="1615382896256" duration="33000" />
       <workItem from="1615391368188" duration="6011000" />
       <workItem from="1616078661146" duration="926000" />
-      <workItem from="1616080584753" duration="51774000" />
+      <workItem from="1616080584753" duration="53033000" />
     </task>
     <servers />
   </component>

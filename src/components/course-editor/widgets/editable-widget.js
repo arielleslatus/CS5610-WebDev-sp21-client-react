@@ -8,21 +8,20 @@ const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, 
             {
                 editing &&
                 <>
-                    <h2>{currentWidget.type}</h2>
-
-                    <i onClick={() => deleteWidget(widget)}
-                       className="fas fa-trash float-right">
-
-                    </i>
                     <i onClick={() => {
                         setCurrentWidget({})
                         updateWidget(currentWidget)}}
                        className="fas fa-check float-right">
                     </i>
+                    <i onClick={() => deleteWidget(widget)}
+                       className="fas fa-trash float-right">
+
+                    </i>
+
                     <select onChange={(e) => {
                         setCurrentWidget(widget => ({...widget, type: e.target.value}))
                         updateWidget(currentWidget)}}
-                            className="form-control"
+                            className="form-control ats-widget-type-picker"
                             value={currentWidget.type}>
                         <option value="HEADING">Heading</option>
                         <option value="PARAGRAPH">Paragraph</option>
@@ -52,7 +51,7 @@ const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, 
                 <>
 
                     <i onClick={() => setCurrentWidget(widget)}
-                       className="fas fa-cog fa-2x float-right">
+                       className="fas fa-cog float-right">
 
                     </i>
                     {

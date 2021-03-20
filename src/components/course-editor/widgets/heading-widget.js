@@ -1,16 +1,17 @@
 import React from 'react'
+import './widgets.template.client.css'
 
 const HeadingWidget = ({widget, setCurrentWidget, editing}) =>
    {
        //console.log(widget.text)
-       return(<div>
+       return(
+           <div className="ats-heading-widget">
            {
                editing &&
                <>
-                   <h6>{widget.text}</h6>
                    <input onChange={(e) => setCurrentWidget(widget => ({...widget, text: e.target.value}))}
                           defaultValue={widget.text}
-                          className="form-control"/>
+                          className="form-control ats-heading-size-picker"/>
                    <select onChange={(e) => setCurrentWidget(widget => ({...widget, size: parseInt(e.target.value)}))} value={widget.size}
                            className="form-control">
                        <option value={1}>Heading 1</option>
@@ -25,12 +26,30 @@ const HeadingWidget = ({widget, setCurrentWidget, editing}) =>
            {
                !editing &&
                <>
-                   {!editing && widget.size === 1 && <h1>{widget.text}</h1>}
-                   {!editing && widget.size === 2 && <h2>{widget.text}</h2>}
-                   {!editing && widget.size === 3 && <h3>{widget.text}</h3>}
-                   {!editing && widget.size === 4 && <h4>{widget.text}</h4>}
-                   {!editing && widget.size === 5 && <h5>{widget.text}</h5>}
-                   {!editing && widget.size === 6 && <h6>{widget.text}</h6>}
+                   {
+                       !editing && widget.size === 1 &&
+                       <h1 className="ats-heading-title">{widget.text}</h1>
+                   }
+                   {
+                       !editing && widget.size === 2 &&
+                       <h2 className="ats-heading-title">{widget.text}</h2>
+                   }
+                   {
+                       !editing && widget.size === 3 &&
+                       <h3 className="ats-heading-title">{widget.text}</h3>
+                   }
+                   {
+                       !editing && widget.size === 4 &&
+                       <h4 className="ats-heading-title">{widget.text}</h4>
+                   }
+                   {
+                       !editing && widget.size === 5 &&
+                       <h5 className="ats-heading-title">{widget.text}</h5>
+                   }
+                   {
+                       !editing && widget.size === 6 &&
+                       <h6 className="ats-heading-title">{widget.text}</h6>
+                   }
                </>
            }
 

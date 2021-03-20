@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
+import './widgets.template.client.css'
 
 const ParagraphWidget = ({widget, setCurrentWidget, editing, key}) => {
     return(
-        <div>
+        <div className="ats-paragraph-widget">
             {
                 editing &&
                 <textarea onChange={(e) => setCurrentWidget({...widget, text: e.target.value})}
