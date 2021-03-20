@@ -10,14 +10,18 @@ import widgetActions from "../../actions/widget-actions";
 
 
 
-const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidget, deleteWidget}) => {
-    const {topicId} = useParams();
+const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidget, deleteWidget, clearWidgets}) => {
+    const {layout, courseId, moduleId, lessonId, topicId} = useParams();
     const [allWidgets, setAllWidgets] = useState([])
     const [currentWidget, setCurrentWidget] = useState({})
 
     useEffect(() => {
-        if (topicId !== undefined && typeof topicId !== undefined) {
+        if (topicId !== undefined && typeof topicId !== undefined &&
+            lessonId !== undefined && typeof lessonId !== undefined &&
+            moduleId !== undefined && typeof moduleId !== undefined) {
             findWidgetsForTopic(topicId)
+        } else {
+            clearWidgets()
         }
     }, [topicId])
 
@@ -87,7 +91,9 @@ const dtpm = (dispatch) => ({
     createWidget: (topicId) => widgetActions.createWidget(dispatch, topicId),
     findWidgetsForTopic: (topicId) => widgetActions.findWidgetsForTopic(dispatch, topicId),
     updateWidget: (newItem) => widgetActions.updateWidget(dispatch, newItem),
-    deleteWidget: (widgetToDelete) => widgetActions.deleteWidget(dispatch, widgetToDelete)
+    deleteWidget: (widgetToDelete) => widgetActions.deleteWidget(dispatch, widgetToDelete),
+    clearWidgets: () => dispatch({type: "CLEAR_WIDGETS"})
+
 })
 
 export default connect(stpm, dtpm)(WidgetList)

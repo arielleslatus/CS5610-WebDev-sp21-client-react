@@ -41,6 +41,11 @@ const WidgetReducer = (state = initialState, action) => {
                     }
                 })
             }
+        case "CLEAR_WIDGETS":
+            return {
+                ...state,
+                widgets: []
+            }
         default:
             return state
     }

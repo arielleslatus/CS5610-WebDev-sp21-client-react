@@ -11,8 +11,12 @@ export const createWidget = (dispatch, topicId) => {
 }
 
 export const findWidgetsForTopic = (dispatch, topicId) => {
-    widgetService.findWidgetsForTopic(topicId)
-        .then(widgets => dispatch({type: FIND_WIDGETS_FOR_TOPIC, widgets: widgets}))
+    console.log(topicId)
+    if (topicId !== undefined) {
+        widgetService.findWidgetsForTopic(topicId)
+            .then(widgets => dispatch({type: FIND_WIDGETS_FOR_TOPIC, widgets: widgets}))
+    }
+
 }
 export const updateWidget = (dispatch, newItem) => {
     widgetService.updateWidget(newItem.id, newItem)

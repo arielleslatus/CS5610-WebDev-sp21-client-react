@@ -79,6 +79,8 @@ const dtpm = (dispatch) => ({
     clearLessons: () => {
         dispatch({type: "CLEAR_LESSONS"})
         dispatch({type: "CLEAR_TOPICS"})
+        dispatch({type: "CLEAR_WIDGETS"})
+
     }
 })
 

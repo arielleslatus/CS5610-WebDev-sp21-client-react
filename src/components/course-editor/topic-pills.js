@@ -69,7 +69,12 @@ const dtpm = (dispatch) => ({
         topicService.deleteTopic(topicToDelete._id)
             .then(status => dispatch({type: "DELETE_TOPIC", topicToDelete: topicToDelete}))
     },
-    clearTopics: () => dispatch({type: "CLEAR_TOPICS"})
+    clearTopics: () => {
+        dispatch({type: "CLEAR_TOPICS"})
+        dispatch({type: "CLEAR_WIDGETS"})
+    }
+
+
 })
 
 export default connect(stpm, dtpm)(TopicPills)
