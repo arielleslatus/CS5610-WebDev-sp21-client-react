@@ -15,6 +15,8 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
     const [allWidgets, setAllWidgets] = useState([])
     const [currentWidget, setCurrentWidget] = useState({})
 
+
+
     useEffect(() => {
         if (topicId !== undefined && typeof topicId !== undefined &&
             lessonId !== undefined && typeof lessonId !== undefined &&
@@ -40,7 +42,9 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
                                    className="fas fa-trash float-right">
 
                                 </i>
-                                <i onClick={() => updateWidget(widget)}
+                                <i onClick={() => {
+                                    setCurrentWidget({})
+                                    updateWidget(widget)}}
                                    className="fas fa-check float-right">
                                 </i>
                                 <select onChange={(e) => setCurrentWidget(widget => ({...widget, type: e.target.value}))} className="form-control">
