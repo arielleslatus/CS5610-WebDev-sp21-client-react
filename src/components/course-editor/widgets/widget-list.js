@@ -42,8 +42,11 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
                                 </i>
                                 <i onClick={() => updateWidget(widget)}
                                    className="fas fa-check float-right">
-
                                 </i>
+                                <select onChange={(e) => setCurrentWidget(widget => ({...widget, type: e.target.value}))} className="form-control">
+                                    <option value="HEADING">Heading</option>
+                                    <option value="PARAGRAPH">Paragraph</option>
+                                </select>
                             </>
                         }
                         {
