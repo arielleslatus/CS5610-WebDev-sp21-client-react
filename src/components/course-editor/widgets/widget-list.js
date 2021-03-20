@@ -1,53 +1,75 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 import HeadingWidget from "./heading-widget";
 import ParagraphWidget from "./paragraph-widget";
 import {useParams} from 'react-router-dom'
 import '../course-editor.template.client.css'
 import '../../component-style.css'
+import {connect} from 'react-redux'
+import widgetActions from "../../actions/widget-actions";
 
 
-const WidgetList = () => {
 
+
+const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidget, deleteWidget}) => {
     const {topicId} = useParams();
-    const [widgets, setWidgets] = useState([])
-    useEffect(() => {
-        fetch(`http://localhost:8080/api/topics/${topicId}/widgets`)
-            .then(response => response.json())
-            .then(widgets => setWidgets(widgets))
-    }, [topicId])
+    const [allWidgets, setAllWidgets] = useState([])
+    const [currentWidget, setCurrentWidget] = useState({})
 
-    const createWidget = () => {
-        fetch(`http://localhost:8080/api/topics/${topicId}/widgets`, {
-            method: 'POST',
-            body: JSON.stringify({type: "HEADING", size: "2", text: "New Widget"}),
-            headers: {
-                "content-type": 'application/json'
-            }
-            })
-            .then(response => response.json())
-            .then(widget => setWidgets((widgets) => [...widgets, widget]))
-    }
+    useEffect(() => {
+        if (topicId !== undefined && typeof topicId !== undefined) {
+            findWidgetsForTopic(topicId)
+        }
+    }, [topicId])
 
     return(
         <div>
-            <h1>Widget List</h1>
+            <h1>Widget List {currentWidget.id}</h1>
             <ul className="list-group">
                 {
                     widgets.map(widget =>
+
                     <li key={widget.id} className="list-group-item">
                         {
+                            currentWidget.id === widget.id &&
+                            <>
+                                <i onClick={() => deleteWidget(widget)}
+                                   className="fas fa-trash float-right">
+
+                                </i>
+                                <i onClick={() => updateWidget(widget)}
+                                   className="fas fa-check float-right">
+
+                                </i>
+                            </>
+                        }
+                        {
+                            currentWidget.id !== widget.id &&
+                            <i onClick={() => setCurrentWidget(widget)}
+                               className="fas fa-cog fa-2x float-right">
+
+                            </i>
+                        }
+
+                        {
                             widget.type === "HEADING" &&
-                            <HeadingWidget widget={widget} />
+                            <HeadingWidget
+                                setCurrentWidget={setCurrentWidget}
+                                editing={currentWidget.id === widget.id}
+                                widget={widget}/>
                         }
                         {
                             widget.type === "PARAGRAPH" &&
-                            <ParagraphWidget widget={widget} />
+                            <ParagraphWidget
+                                setCurrentWidget={setCurrentWidget}
+                                editing={currentWidget.id === widget.id}
+                                widget={currentWidget}/>
                         }
                     </li>)
                 }
                 <li className="ats-nav-item list-group-item">
-                    <i onClick={() => createWidget()}
-                       className="fas fa-plus fa-2x ats-plus-icon"></i>
+                    <i onClick={() => createWidget(topicId)}
+                       className="fas fa-plus fa-2x ats-plus-icon">
+                    </i>
                 </li>
             </ul>
 
@@ -55,4 +77,19 @@ const WidgetList = () => {
     )
 }
 
-export default WidgetList
+const stpm = (state) => {
+    return ({
+        widgets: state.widgetReducer.widgets
+    })
+}
+
+const dtpm = (dispatch) => ({
+    createWidget: (topicId) => widgetActions.createWidget(dispatch, topicId),
+    findWidgetsForTopic: (topicId) => widgetActions.findWidgetsForTopic(dispatch, topicId),
+    updateWidget: (newItem) => widgetActions.updateWidget(dispatch, newItem),
+    deleteWidget: (widgetToDelete) => widgetActions.deleteWidget(dispatch, widgetToDelete)
+})
+
+export default connect(stpm, dtpm)(WidgetList)
+
+

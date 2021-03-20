@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/actions/widget-actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/widget-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/widget-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.template.client.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.template.client.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/heading-widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/paragraph-widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
       <workItem from="1615382896256" duration="33000" />
       <workItem from="1615391368188" duration="6011000" />
       <workItem from="1616078661146" duration="926000" />
-      <workItem from="1616080584753" duration="3634000" />
+      <workItem from="1616080584753" duration="44413000" />
     </task>
     <servers />
   </component>
@@ -82,6 +83,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="609" y="125" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616095473890">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="609" y="125" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1616095473890" />
     <state x="533" y="273" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615391594890">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -94,9 +99,17 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="519" y="607" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1615391367752" />
-    <state x="570" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1614199501205">
+    <state x="864" y="225" width="816" height="825" key="find.popup" timestamp="1616187149974">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="570" y="244" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1614199501205" />
+    <state x="864" y="225" width="816" height="825" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1616187149974" />
+    <state x="493" y="211" key="run.anything.popup" timestamp="1616108714717">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="493" y="211" key="run.anything.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1616108714717" />
+    <state x="570" y="244" width="670" height="676" key="search.everywhere.popup" timestamp="1616108906382">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="570" y="244" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1616108906382" />
   </component>
 </project>

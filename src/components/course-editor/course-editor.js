@@ -5,6 +5,7 @@ import '../component-style.css'
 import ModuleReducer from "../../reducers/module-reducer";
 import LessonReducer from "../../reducers/lesson-reducer";
 import TopicReducer from "../../reducers/topic-reducer";
+import WidgetReducer from "../../reducers/widget-reducer";
 import {Provider} from "react-redux";
 import ModuleList from "./module-list";
 import LessonTabs from "./lesson-tabs";
@@ -16,7 +17,8 @@ import WidgetList from "./widgets/widget-list";
 const reducer = combineReducers({
                                     moduleReducer: ModuleReducer,
                                     lessonReducer: LessonReducer,
-                                    topicReducer: TopicReducer
+                                    topicReducer: TopicReducer,
+                                    widgetReducer: WidgetReducer
 
                                 })
 
