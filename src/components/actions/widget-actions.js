@@ -6,8 +6,10 @@ export const UPDATE_WIDGET = "UPDATE_WIDGET"
 export const DELETE_WIDGET = "DELETE_WIDGET"
 
 export const createWidget = (dispatch, topicId) => {
-    widgetService.createWidget(topicId, {type: "HEADING", text: "New Widget", size: 2})
-        .then(widget => dispatch({type: CREATE_WIDGET_FOR_TOPIC, widget: widget}))
+    if (topicId !== undefined) {
+        widgetService.createWidget(topicId, {type: "HEADING", text: "New Widget", size: 2})
+            .then(widget => dispatch({type: CREATE_WIDGET_FOR_TOPIC, widget: widget}))
+    }
 }
 
 export const findWidgetsForTopic = (dispatch, topicId) => {

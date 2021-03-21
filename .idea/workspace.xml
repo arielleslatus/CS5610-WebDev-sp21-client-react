@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.template.client.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.template.client.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/actions/widget-actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/actions/widget-actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/widgets.template.client.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widgets.template.client.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +43,13 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/course-editor" />
-      <recent name="$PROJECT_DIR$/src/reducers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/course-editor" />
       <recent name="$PROJECT_DIR$/src/components/counter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/course-editor" />
+      <recent name="$PROJECT_DIR$/src/reducers" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -75,7 +71,8 @@
       <workItem from="1615391368188" duration="6011000" />
       <workItem from="1616078661146" duration="926000" />
       <workItem from="1616080584753" duration="53464000" />
-      <workItem from="1616330173542" duration="3910000" />
+      <workItem from="1616330173542" duration="4978000" />
+      <workItem from="1616350404157" duration="589000" />
     </task>
     <servers />
   </component>
@@ -95,10 +92,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="670" y="188" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1616265983330" />
-    <state x="519" y="607" key="com.intellij.ide.util.TipDialog" timestamp="1615391367752">
+    <state x="519" y="607" key="com.intellij.ide.util.TipDialog" timestamp="1616350409931">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="519" y="607" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1615391367752" />
+    <state x="519" y="607" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1616350409931" />
     <state x="864" y="225" width="816" height="825" key="find.popup" timestamp="1616187149974">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

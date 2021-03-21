@@ -1,7 +1,7 @@
 import React from 'react'
 import './widgets.template.client.css'
 
-const ParagraphWidget = ({widget, setCurrentWidget, editing, key}) => {
+const ParagraphWidget = ({widget, setCurrentWidget, editing}) => {
     return(
         <div className="ats-paragraph-widget">
             {

@@ -12,12 +12,12 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
     const [currentWidget, setCurrentWidget] = useState({})
 
     useEffect(() => {
-        if (topicId !== undefined && typeof topicId !== undefined &&
-            lessonId !== undefined && typeof lessonId !== undefined &&
-            moduleId !== undefined && typeof moduleId !== undefined) {
+        if (topicId !== undefined && typeof topicId !== undefined ) {
             findWidgetsForTopic(topicId)
+            console.log("shouldnt hit here")
         } else {
             clearWidgets()
+            console.log("Arielle")
         }
     }, [topicId])
 
