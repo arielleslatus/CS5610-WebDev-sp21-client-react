@@ -11,10 +11,10 @@ const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, 
                     <i onClick={() => {
                         setCurrentWidget({})
                         updateWidget(currentWidget)}}
-                       className="fas fa-check float-right">
+                       className="fas fa-check float-right ats-widget-btn">
                     </i>
                     <i onClick={() => deleteWidget(widget)}
-                       className="fas fa-trash float-right">
+                       className="fas fa-trash float-right ats-widget-btn">
 
                     </i>
 
@@ -51,7 +51,7 @@ const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, 
                 <>
 
                     <i onClick={() => setCurrentWidget(widget)}
-                       className="fas fa-cog float-right">
+                       className="fas fa-cog float-right ats-widget-btn">
 
                     </i>
                     {

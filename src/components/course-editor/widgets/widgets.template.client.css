@@ -15,3 +15,21 @@
     margin-bottom: 10px;
 }
 
+.ats-widget-btn {
+    margin: 5px;
+}
+
+.ats-widgets-title {
+    margin: 20px;
+    width: 100px;
+}
+
+.ats-widget-title-row {
+    width: 825px;
+    color: darkslateblue;
+}
+
+.ats-add-widget-btn {
+    margin-top: 20px;
+}
+

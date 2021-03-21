@@ -30,7 +30,17 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
 
     return(
         <div>
-            <h1>Widget List {currentWidget.id}</h1>
+            <div className="row ats-widget-title-row">
+                <div className="col-11">
+                    <h2 className="ats-widgets-title">Widgets</h2>
+                </div>
+                <div className="col-1 ">
+                    <i onClick={() => createWidget(topicId)}
+                       className="fas fa-plus fa-2x ats-plus-icon float-right ats-add-widget-btn">
+                    </i>
+                </div>
+            </div>
+
             <ul className="list-group">
                 {
                     widgets.map(widget =>
@@ -45,28 +55,9 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
                             editing={currentWidget.id === widget.id}
                             updateWidget={updateWidget}
                             deleteWidget={deleteWidget}/>
-
-                        {/*{*/}
-                        {/*    widget.type === "HEADING" &&*/}
-                        {/*    <HeadingWidget*/}
-                        {/*        setCurrentWidget={setCurrentWidget}*/}
-                        {/*        editing={currentWidget.id === widget.id}*/}
-                        {/*        widget={widget}/>*/}
-                        {/*}*/}
-                        {/*{*/}
-                        {/*    widget.type === "PARAGRAPH" &&*/}
-                        {/*    <ParagraphWidget*/}
-                        {/*        setCurrentWidget={setCurrentWidget}*/}
-                        {/*        editing={currentWidget.id === widget.id}*/}
-                        {/*        widget={currentWidget}/>*/}
-                        {/*}*/}
                     </li>)
                 }
-                <li className="ats-nav-item list-group-item">
-                    <i onClick={() => createWidget(topicId)}
-                       className="fas fa-plus fa-2x ats-plus-icon">
-                    </i>
-                </li>
+
             </ul>
 
         </div>

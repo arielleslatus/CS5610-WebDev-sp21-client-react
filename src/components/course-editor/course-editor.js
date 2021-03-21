@@ -65,7 +65,6 @@ const CourseEditor = () => {
                                 <LessonTabs/>
                                 <h2 className="ats-category-title">Topics</h2>
                                 <TopicPills/>
-                                <h2 className="ats-category-title">Widgets</h2>
                                 <WidgetList/>
                             </div>
                         </div>
