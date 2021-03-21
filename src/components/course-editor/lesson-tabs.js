@@ -3,10 +3,9 @@ import {connect} from 'react-redux'
 import EditableItem from "./editable-item";
 import {useParams} from 'react-router-dom'
 import lessonService from '../../services/lesson-service'
-import topicService from "../../services/topic-service";
 
-
-const LessonTabs = ({lessons = [],
+const LessonTabs = ({
+                        lessons = [],
                         createLesson,
                         findLessonsForModule,
                         updateLesson,
@@ -15,7 +14,6 @@ const LessonTabs = ({lessons = [],
                     }) => {
 
     const {layout, courseId, moduleId, lessonId} = useParams();
-
 
     useEffect(() => {
         if (moduleId !== undefined && typeof moduleId !== undefined) {
@@ -40,7 +38,7 @@ const LessonTabs = ({lessons = [],
                     lessons.map(lesson =>
                                     <EditableItem
                                         key={lesson._id}
-                                        to = {`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lesson._id}`}
+                                        to={`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lesson._id}`}
                                         updateItem={updateLesson}
                                         deleteItem={deleteLesson}
                                         item={lesson}
@@ -50,12 +48,8 @@ const LessonTabs = ({lessons = [],
                 }
             </ul>
         </div>
-
-
     )
 }
-
-
 
 const stpm = (state) => {
     return ({

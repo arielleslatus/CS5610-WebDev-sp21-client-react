@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import HeadingWidget from "./heading-widget";
-import ParagraphWidget from "./paragraph-widget";
 import {useParams} from 'react-router-dom'
 import '../course-editor.template.client.css'
 import '../../component-style.css'
@@ -8,15 +6,10 @@ import {connect} from 'react-redux'
 import widgetActions from "../../actions/widget-actions";
 import EditableWidget from "./editable-widget";
 
-
-
-
 const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidget, deleteWidget, clearWidgets}) => {
     const {layout, courseId, moduleId, lessonId, topicId} = useParams();
     const [allWidgets, setAllWidgets] = useState([])
     const [currentWidget, setCurrentWidget] = useState({})
-
-
 
     useEffect(() => {
         if (topicId !== undefined && typeof topicId !== undefined &&
@@ -28,7 +21,7 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
         }
     }, [topicId])
 
-    return(
+    return (
         <div>
             <div className="row ats-title-row">
                 <div className="col-11">
@@ -40,26 +33,21 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
                     </i>
                 </div>
             </div>
-
             <ul className="list-group">
                 {
                     widgets.map(widget =>
-
-                    <li key={widget.id} className="list-group-item">
-
-                        <EditableWidget
-                            key={widget.id}
-                            widget={widget}
-                            currentWidget={currentWidget}
-                            setCurrentWidget={setCurrentWidget}
-                            editing={currentWidget.id === widget.id}
-                            updateWidget={updateWidget}
-                            deleteWidget={deleteWidget}/>
-                    </li>)
+                                    <li key={widget.id} className="list-group-item">
+                                        <EditableWidget
+                                            key={widget.id}
+                                            widget={widget}
+                                            currentWidget={currentWidget}
+                                            setCurrentWidget={setCurrentWidget}
+                                            editing={currentWidget.id === widget.id}
+                                            updateWidget={updateWidget}
+                                            deleteWidget={deleteWidget}/>
+                                    </li>)
                 }
-
             </ul>
-
         </div>
     )
 }

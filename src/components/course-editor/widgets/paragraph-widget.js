@@ -9,7 +9,6 @@ const ParagraphWidget = ({widget, setCurrentWidget, editing, key}) => {
                 <textarea onChange={(e) => setCurrentWidget({...widget, text: e.target.value})}
                           defaultValue={widget.text}
                           className="form-control"></textarea>
-
             }
             {
                 !editing &&

@@ -4,15 +4,14 @@ import EditableItem from "./editable-item";
 import {useParams} from 'react-router-dom'
 import topicService, {createTopic} from '../../services/topic-service'
 
-
-const TopicPills = ({topics = [],
+const TopicPills = ({
+                        topics = [],
                         createTopic,
                         findTopicsForLesson,
                         updateTopic,
                         deleteTopic,
                         clearTopics
                     }) => {
-
     const {layout, courseId, moduleId, lessonId, topicId} = useParams();
     useEffect(() => {
         if (moduleId !== undefined && typeof moduleId !== undefined &&
@@ -23,34 +22,31 @@ const TopicPills = ({topics = [],
         }
     }, [moduleId, lessonId])
     return (
-            <div>
-                <div className="row ats-title-row">
-                    <div className="col-11">
-                        <h2 className="ats-category-title">Topics</h2>
-                    </div>
-                    <div className="col-1">
-                        <i onClick={() => createTopic(lessonId)}
-                           className="fas fa-plus fa-2x float-right ats-add-btn"></i>
-                    </div>
+        <div>
+            <div className="row ats-title-row">
+                <div className="col-11">
+                    <h2 className="ats-category-title">Topics</h2>
                 </div>
-
-                <ul className="nav nav-pills ats-unordered-pills">
-                    {
-                        topics.map(topic =>
-                                       <EditableItem
-                                           key={topic._id}
-                                           to = {`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lessonId}/topics/${topic._id}`}
-                                           updateItem={updateTopic}
-                                           deleteItem={deleteTopic}
-                                           item={topic}
-                                           itemId={topicId}
-                                           type={"topic"}/>
-                        )
-                    }
-                </ul>
-
+                <div className="col-1">
+                    <i onClick={() => createTopic(lessonId)}
+                       className="fas fa-plus fa-2x float-right ats-add-btn"></i>
+                </div>
             </div>
-
+            <ul className="nav nav-pills ats-unordered-pills">
+                {
+                    topics.map(topic =>
+                                   <EditableItem
+                                       key={topic._id}
+                                       to={`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lessonId}/topics/${topic._id}`}
+                                       updateItem={updateTopic}
+                                       deleteItem={deleteTopic}
+                                       item={topic}
+                                       itemId={topicId}
+                                       type={"topic"}/>
+                    )
+                }
+            </ul>
+        </div>
     )
 }
 
@@ -62,10 +58,10 @@ const stpm = (state) => {
 
 const dtpm = (dispatch) => ({
     createTopic: (lessonId) => {
-            if (lessonId !== undefined) {
-                topicService.createTopic(lessonId, {title: 'New Topic'})
-                    .then(topic => dispatch({type: "CREATE_TOPIC", topic: topic}))
-            }
+        if (lessonId !== undefined) {
+            topicService.createTopic(lessonId, {title: 'New Topic'})
+                .then(topic => dispatch({type: "CREATE_TOPIC", topic: topic}))
+        }
     },
     findTopicsForLesson: (lessonId) => {
         topicService.findTopicsForLesson(lessonId)
@@ -83,8 +79,6 @@ const dtpm = (dispatch) => ({
         dispatch({type: "CLEAR_TOPICS"})
         dispatch({type: "CLEAR_WIDGETS"})
     }
-
-
 })
 
 export default connect(stpm, dtpm)(TopicPills)

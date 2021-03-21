@@ -3,24 +3,25 @@ import HeadingWidget from "./heading-widget";
 import ParagraphWidget from "./paragraph-widget";
 
 const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, updateWidget, deleteWidget}) => {
-    return(
+    return (
         <div>
             {
                 editing &&
                 <>
                     <i onClick={() => {
                         setCurrentWidget({})
-                        updateWidget(currentWidget)}}
+                        updateWidget(currentWidget)
+                    }}
                        className="fas fa-check float-right ats-widget-btn">
                     </i>
                     <i onClick={() => deleteWidget(widget)}
                        className="fas fa-trash float-right ats-widget-btn">
 
                     </i>
-
                     <select onChange={(e) => {
                         setCurrentWidget(widget => ({...widget, type: e.target.value}))
-                        updateWidget(currentWidget)}}
+                        updateWidget(currentWidget)
+                    }}
                             className="form-control ats-widget-type-picker"
                             value={currentWidget.type}>
                         <option value="HEADING">Heading</option>
@@ -49,10 +50,8 @@ const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, 
             {
                 !editing &&
                 <>
-
                     <i onClick={() => setCurrentWidget(widget)}
                        className="fas fa-cog float-right ats-widget-btn">
-
                     </i>
                     {
                         widget.type === "HEADING" &&
@@ -73,10 +72,7 @@ const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, 
                         </>
                     }
                 </>
-
             }
-
-
         </div>
     )
 }

@@ -3,46 +3,43 @@ import {connect, Provider} from 'react-redux'
 import EditableItem from "./editable-item";
 import {useParams} from 'react-router-dom'
 import moduleService from "../../services/module-service";
-import lessonService from "../../services/lesson-service"
-import topicService from "../../services/topic-service"
 import './course-editor.template.client.css'
 import '../component-style.css'
 
-const ModuleList = ({modules = [],
+const ModuleList = ({
+                        modules = [],
                         createModule,
                         findModulesForCourse,
                         updateModule,
                         deleteModule
                     }) => {
-
     const {layout, courseId, moduleId} = useParams();
     useEffect(() => {
         findModulesForCourse(courseId)
     }, [])
     return (
-            <ul className="list-group ats-modules-list">
-                {
-                    modules.map(module =>
-                                        <EditableItem
-                                            key={module._id}
-                                            to = {`/courses/${layout}/edit/${courseId}/modules/${module._id}`}
-                                            updateItem={updateModule}
-                                            deleteItem={deleteModule}
-                                            item={module}
-                                            itemId={moduleId}
-                                            type={"module"}/>
-                    )
-                }
-                <li className="list-group-item ats-list-group-item">
-                    <i onClick={() => createModule(courseId)}
-                       className="fas fa-plus fa-2x ats-module-plus-icon"></i>
-                </li>
-            </ul>
+        <ul className="list-group ats-modules-list">
+            {
+                modules.map(module =>
+                                <EditableItem
+                                    key={module._id}
+                                    to={`/courses/${layout}/edit/${courseId}/modules/${module._id}`}
+                                    updateItem={updateModule}
+                                    deleteItem={deleteModule}
+                                    item={module}
+                                    itemId={moduleId}
+                                    type={"module"}/>
+                )
+            }
+            <li className="list-group-item ats-list-group-item">
+                <i onClick={() => createModule(courseId)}
+                   className="fas fa-plus fa-2x ats-module-plus-icon"></i>
+            </li>
+        </ul>
     )
 }
 const stpm = (state) => ({
     modules: state.moduleReducer.modules
-
 })
 
 const dtpm = (dispatch) => ({

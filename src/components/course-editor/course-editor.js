@@ -19,7 +19,6 @@ const reducer = combineReducers({
                                     lessonReducer: LessonReducer,
                                     topicReducer: TopicReducer,
                                     widgetReducer: WidgetReducer
-
                                 })
 
 const store = createStore(reducer)
@@ -37,37 +36,35 @@ const CourseEditor = () => {
     return (
         <Provider store={store}>
             <body>
-                <div className="container-xxl">
-                    <div className="ats-sticky-nav-bar row">
-                        <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                            <Link to={`/courses/${layout}`} className="">
-                                <i className="fas fa-times fa-2x col-1 ats-back-button"></i>
-                            </Link>
-                        </div>
-
-                        <div className="col-lg-2 d-none d-lg-block ats-vertical-align">
-                            Course Editor
-                        </div>
-                        <div className="col-lg-6 col-md-9 col-sm-9 col-xs-9 ats-course-title">
-                            {inputTitle}
-                        </div>
-                        <div className="col-lg-3 col-md-2 col-sm-2 col-xs-2"></div>
+            <div className="container-xxl">
+                <div className="ats-sticky-nav-bar row">
+                    <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                        <Link to={`/courses/${layout}`} className="">
+                            <i className="fas fa-times fa-2x col-1 ats-back-button"></i>
+                        </Link>
                     </div>
-
-                    <div className="container-lg">
-                        <div className="row ats-page-body ats-fill">
-                            <div className="col-3 ats-list-area">
-                                <h2 className="ats-category-title">Modules</h2>
-                                <ModuleList/>
-                            </div>
-                            <div className="col-9 ">
-                                <LessonTabs/>
-                                <TopicPills/>
-                                <WidgetList/>
-                            </div>
+                    <div className="col-lg-2 d-none d-lg-block ats-vertical-align">
+                        Course Editor
+                    </div>
+                    <div className="col-lg-6 col-md-9 col-sm-9 col-xs-9 ats-course-title">
+                        {inputTitle}
+                    </div>
+                    <div className="col-lg-3 col-md-2 col-sm-2 col-xs-2"></div>
+                </div>
+                <div className="container-lg">
+                    <div className="row ats-page-body ats-fill">
+                        <div className="col-3 ats-list-area">
+                            <h2 className="ats-category-title">Modules</h2>
+                            <ModuleList/>
+                        </div>
+                        <div className="col-9 ">
+                            <LessonTabs/>
+                            <TopicPills/>
+                            <WidgetList/>
                         </div>
                     </div>
                 </div>
+            </div>
             </body>
         </Provider>
     )
