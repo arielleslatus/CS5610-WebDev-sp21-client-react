@@ -14,10 +14,8 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
     useEffect(() => {
         if (topicId !== undefined && typeof topicId !== undefined ) {
             findWidgetsForTopic(topicId)
-            console.log("shouldnt hit here")
         } else {
             clearWidgets()
-            console.log("Arielle")
         }
     }, [topicId])
 
