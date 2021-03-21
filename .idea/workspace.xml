@@ -4,7 +4,9 @@
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/editable-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/editable-widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/course-editor.template.client.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/course-editor.template.client.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/lesson-tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/topic-pills.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widget-list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/widgets.template.client.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widgets.template.client.css" afterDir="false" />
     </list>
@@ -73,7 +75,7 @@
       <workItem from="1615391368188" duration="6011000" />
       <workItem from="1616078661146" duration="926000" />
       <workItem from="1616080584753" duration="53464000" />
-      <workItem from="1616330173542" duration="1996000" />
+      <workItem from="1616330173542" duration="3910000" />
     </task>
     <servers />
   </component>

@@ -23,24 +23,34 @@ const TopicPills = ({topics = [],
         }
     }, [moduleId, lessonId])
     return (
-            <ul className="nav nav-pills ats-unordered-pills">
-                {
-                    topics.map(topic =>
-                                        <EditableItem
-                                            key={topic._id}
-                                            to = {`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lessonId}/topics/${topic._id}`}
-                                            updateItem={updateTopic}
-                                            deleteItem={deleteTopic}
-                                            item={topic}
-                                            itemId={topicId}
-                                            type={"topic"}/>
-                    )
-                }
-                <li className="ats-nav-item">
-                    <i onClick={() => createTopic(lessonId)}
-                       className="fas fa-plus fa-2x ats-plus-icon"></i>
-                </li>
-            </ul>
+            <div>
+                <div className="row ats-title-row">
+                    <div className="col-11">
+                        <h2 className="ats-category-title">Topics</h2>
+                    </div>
+                    <div className="col-1">
+                        <i onClick={() => createTopic(lessonId)}
+                           className="fas fa-plus fa-2x float-right ats-add-btn"></i>
+                    </div>
+                </div>
+
+                <ul className="nav nav-pills ats-unordered-pills">
+                    {
+                        topics.map(topic =>
+                                       <EditableItem
+                                           key={topic._id}
+                                           to = {`/courses/${layout}/edit/${courseId}/modules/${moduleId}/lessons/${lessonId}/topics/${topic._id}`}
+                                           updateItem={updateTopic}
+                                           deleteItem={deleteTopic}
+                                           item={topic}
+                                           itemId={topicId}
+                                           type={"topic"}/>
+                        )
+                    }
+                </ul>
+
+            </div>
+
     )
 }
 

@@ -30,13 +30,13 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
 
     return(
         <div>
-            <div className="row ats-widget-title-row">
+            <div className="row ats-title-row">
                 <div className="col-11">
-                    <h2 className="ats-widgets-title">Widgets</h2>
+                    <h2 className="ats-category-title">Widgets</h2>
                 </div>
                 <div className="col-1 ">
                     <i onClick={() => createWidget(topicId)}
-                       className="fas fa-plus fa-2x ats-plus-icon float-right ats-add-widget-btn">
+                       className="fas fa-plus fa-2x ats-plus-icon float-right ats-add-btn">
                     </i>
                 </div>
             </div>

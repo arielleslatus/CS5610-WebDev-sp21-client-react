@@ -61,9 +61,7 @@ const CourseEditor = () => {
                                 <ModuleList/>
                             </div>
                             <div className="col-9 ">
-                                <h2 className="ats-category-title">Lessons</h2>
                                 <LessonTabs/>
-                                <h2 className="ats-category-title">Topics</h2>
                                 <TopicPills/>
                                 <WidgetList/>
                             </div>

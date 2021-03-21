@@ -75,20 +75,10 @@
     float: right;
 }
 
-.ats-plus-icon {
-    padding-top: 5px;
-}
-
-.ats-module-plus-icon {
-    align-content: center;
-}
-
 .ats-list-group-item {
     padding: 15px 106px;
     margin: 10px auto;
 }
-
-
 
 .nav-item.active {
     background-color: darkslateblue !important;
@@ -128,7 +118,7 @@
 }
 
 .ats-unordered-pills {
-    margin: 20px;
+    margin: 5px 20px;
     color: darkslateblue;
     border-bottom: solid lightgrey;
 }
@@ -142,12 +132,22 @@
     border-radius: 5px;
 }
 
-.ats-category-title {
-    color: darkslateblue;
-    margin: 20px;
-}
 
 .ats-edit-row {
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.ats-title-row {
+    width: 825px;
+    color: darkslateblue;
+}
+
+.ats-add-btn {
+    margin-top: 20px;
+}
+
+.ats-category-title {
+    margin: 20px;
+    width: 100px;
 }
