@@ -1,8 +1,7 @@
-const TOPIC_URL = process.env.REACT_APP_TOPIC_URL
-const WIDGET_URL = process.env.REACT_APP_WIDGET_URL
+
 
 const createWidget = (topicId, widget) =>
-        fetch(`${TOPIC_URL}/${topicId}/widgets`, {
+        fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/topics/${topicId}/widgets`, {
         method: 'POST',
         body: JSON.stringify(widget),
         headers: {
@@ -11,12 +10,13 @@ const createWidget = (topicId, widget) =>
     })
         .then(response => response.json())
 
+
 export const findWidgetsForTopic = (topicId) =>
-    fetch(`${TOPIC_URL}/${topicId}/widgets`)
+    fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/topics/${topicId}/widgets`)
         .then(response => response.json());
 
 export const updateWidget = (widgetId, widget) =>
-    fetch(`${WIDGET_URL}/${widgetId}`, {
+    fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/widgets/${widgetId}`, {
         method: 'PUT',
         body: JSON.stringify(widget),
         headers: {
@@ -26,7 +26,7 @@ export const updateWidget = (widgetId, widget) =>
         .then(response => response.json());
 
 export const deleteWidget = (widgetId) =>
-    fetch(`${WIDGET_URL}/${widgetId}`, {
+    fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/widgets/${widgetId}`, {
         method: 'DELETE'
     })
         .then(response => response.json());
