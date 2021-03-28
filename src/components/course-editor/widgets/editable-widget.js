@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import HeadingWidget from "./heading-widget";
 import ParagraphWidget from "./paragraph-widget";
+import ListWidget from "./list-widget";
+import ImageWidget from "./image-widget";
 
 const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, updateWidget, deleteWidget}) => {
     return (
@@ -26,6 +28,8 @@ const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, 
                             value={currentWidget.type}>
                         <option value="HEADING">Heading</option>
                         <option value="PARAGRAPH">Paragraph</option>
+                        <option value="IMAGE">Image</option>
+                        <option value="LIST">List</option>
                     </select>
                     {
                         currentWidget.type === "HEADING" &&
@@ -40,6 +44,24 @@ const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, 
                         currentWidget.type === "PARAGRAPH" &&
                         <>
                             <ParagraphWidget
+                                editing={editing}
+                                widget={currentWidget}
+                                setCurrentWidget={setCurrentWidget}/>
+                        </>
+                    }
+                    {
+                        currentWidget.type === "LIST" &&
+                        <>
+                            <ListWidget
+                                editing={editing}
+                                widget={currentWidget}
+                                setCurrentWidget={setCurrentWidget}/>
+                        </>
+                    }
+                    {
+                        currentWidget.type === "IMAGE" &&
+                        <>
+                            <ImageWidget
                                 editing={editing}
                                 widget={currentWidget}
                                 setCurrentWidget={setCurrentWidget}/>
@@ -66,6 +88,24 @@ const EditableWidget = ({widget, currentWidget, setCurrentWidget, editing, key, 
                         widget.type === "PARAGRAPH" &&
                         <>
                             <ParagraphWidget
+                                editing={editing}
+                                widget={widget}
+                                setCurrentWidget={setCurrentWidget}/>
+                        </>
+                    }
+                    {
+                        widget.type === "LIST" &&
+                        <>
+                            <ListWidget
+                                editing={editing}
+                                widget={widget}
+                                setCurrentWidget={setCurrentWidget}/>
+                        </>
+                    }
+                    {
+                        widget.type === "IMAGE" &&
+                        <>
+                            <ImageWidget
                                 editing={editing}
                                 widget={widget}
                                 setCurrentWidget={setCurrentWidget}/>

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/image-widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/list-widget.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/editable-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/editable-widget.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/widget-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/widget-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTTP Request" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,15 +49,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JPA/Hibernate QL" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/course-editor" />
-      <recent name="$PROJECT_DIR$/src/reducers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/services" />
       <recent name="$PROJECT_DIR$/src/components/course-editor" />
       <recent name="$PROJECT_DIR$/src/components/counter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/course-editor" />
+      <recent name="$PROJECT_DIR$/src/reducers" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -80,7 +81,11 @@
       <workItem from="1616080584753" duration="53464000" />
       <workItem from="1616330173542" duration="4978000" />
       <workItem from="1616350404157" duration="1179000" />
-      <workItem from="1616374169931" duration="9308000" />
+      <workItem from="1616374169931" duration="10024000" />
+      <workItem from="1616781022443" duration="1185000" />
+      <workItem from="1616782412644" duration="1630000" />
+      <workItem from="1616865192780" duration="3135000" />
+      <workItem from="1616964129636" duration="3852000" />
     </task>
     <servers />
   </component>
