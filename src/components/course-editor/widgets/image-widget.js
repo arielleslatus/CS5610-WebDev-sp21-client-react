@@ -1,13 +1,23 @@
 import React from 'react';
 
-const ImageWidget = (editing, widget, setCurrentWidget) => {
-    return (
+const ImageWidget = ({editing, widget, setCurrentWidget}) => {
+    return(
         <div>
-            {JSON.stringify(editing)}
             {
                 editing &&
                 <div>
-                    Hello Image
+                    URL
+                    <input value={widget.url} className="form-control"/>
+                    Width
+                    <input value={widget.width} className="form-control"/>
+                    Height
+                    <input value={widget.height} className="form-control"/>
+                </div>
+            }
+            {
+                !editing &&
+                <div>
+                    <p>{widget.text}</p>
                 </div>
             }
         </div>

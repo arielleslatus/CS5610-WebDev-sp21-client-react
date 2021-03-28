@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/image-widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/list-widget.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/editable-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/editable-widget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/widget-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/widget-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/image-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/image-widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/list-widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/list-widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course-editor/widgets/widgets.template.client.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-editor/widgets/widgets.template.client.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,8 @@
       <workItem from="1616781022443" duration="1185000" />
       <workItem from="1616782412644" duration="1630000" />
       <workItem from="1616865192780" duration="3135000" />
-      <workItem from="1616964129636" duration="3852000" />
+      <workItem from="1616964129636" duration="4019000" />
+      <workItem from="1616971217225" duration="4145000" />
     </task>
     <servers />
   </component>
@@ -108,10 +108,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="299" y="27" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1616431058404" />
-    <state x="519" y="607" key="com.intellij.ide.util.TipDialog" timestamp="1616350409931">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="519" y="608" key="com.intellij.ide.util.TipDialog" timestamp="1616971238432">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="519" y="607" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1616350409931" />
+    <state x="519" y="608" key="com.intellij.ide.util.TipDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1616971238432" />
     <state x="490" y="149" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1616418364787">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
