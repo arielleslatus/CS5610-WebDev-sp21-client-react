@@ -18,7 +18,7 @@ const ModuleList = ({
         findModulesForCourse(courseId)
     }, [])
     return (
-        <ul className="list-group ats-modules-list">
+        <ul className="list-group">
             {
                 modules.map(module =>
                                 <EditableItem

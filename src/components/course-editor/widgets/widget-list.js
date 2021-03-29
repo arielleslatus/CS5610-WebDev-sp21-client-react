@@ -31,7 +31,7 @@ const WidgetList = ({widgets = [], createWidget, findWidgetsForTopic, updateWidg
                     </i>
                 </div>
             </div>
-            <ul className="list-group">
+            <ul className="list-group ats-widget-list">
                 {
                     widgets.map(widget =>
                                     <li key={widget.id} className="list-group-item">

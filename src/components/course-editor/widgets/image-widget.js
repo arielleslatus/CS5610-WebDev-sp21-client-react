@@ -7,17 +7,23 @@ const ImageWidget = ({editing, widget, setCurrentWidget}) => {
                 editing &&
                 <div>
                     URL
-                    <input value={widget.url} className="form-control"/>
+                    <input onChange={(e) => setCurrentWidget({...widget, src: e.target.value})}
+                           defaultValue={widget.src}
+                           className="form-control"/>
                     Width
-                    <input value={widget.width} className="form-control"/>
+                    <input onChange={(e) => setCurrentWidget({...widget, width: e.target.value})}
+                           defaultValue={widget.width}
+                           className="form-control"/>
                     Height
-                    <input value={widget.height} className="form-control"/>
+                    <input onChange={(e) => setCurrentWidget({...widget, height: e.target.value})}
+                           defaultValue={widget.height}
+                           className="form-control"/>
                 </div>
             }
             {
                 !editing &&
                 <div>
-                    <p>{widget.text}</p>
+                    <img src={widget.src} width={widget.width} height={widget.height}/>
                 </div>
             }
         </div>

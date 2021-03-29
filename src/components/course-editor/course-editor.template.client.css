@@ -96,6 +96,7 @@
     background-color: darkslateblue !important;
     color: whitesmoke !important;
     margin: 5px 10px 5px 10px !important;
+    z-index: 0;
 
 }
 
@@ -118,7 +119,7 @@
 }
 
 .ats-unordered-pills {
-    margin: 5px 20px;
+    margin: 0px 20px 5px 20px;
     color: darkslateblue;
     border-bottom: solid lightgrey;
 }
@@ -128,7 +129,7 @@
 }
 
 .ats-nav-item {
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
     border-radius: 5px;
 }
 
@@ -151,3 +152,4 @@
     margin: 20px;
     width: 100px;
 }
+
