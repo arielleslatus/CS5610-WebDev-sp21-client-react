@@ -1,8 +1,8 @@
 
 
 const createWidget = (topicId, widget) =>
-        //fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/topics/${topicId}/widgets`, {
-        fetch(`http://localhost:8080/api/topics/${topicId}/widgets`, {
+        fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/topics/${topicId}/widgets`, {
+        //fetch(`http://localhost:8080/api/topics/${topicId}/widgets`, {
             method: 'POST',
         body: JSON.stringify(widget),
         headers: {
@@ -13,13 +13,13 @@ const createWidget = (topicId, widget) =>
 
 
 export const findWidgetsForTopic = (topicId) =>
-    //fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/topics/${topicId}/widgets`)
-    fetch(`http://localhost:8080/api/topics/${topicId}/widgets`)
+    fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/topics/${topicId}/widgets`)
+    //fetch(`http://localhost:8080/api/topics/${topicId}/widgets`)
         .then(response => response.json());
 
 export const updateWidget = (widgetId, widget) =>
-    //fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/widgets/${widgetId}`, {
-    fetch(`http://localhost:8080/api/widgets/${widgetId}`, {
+    fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/widgets/${widgetId}`, {
+    //fetch(`http://localhost:8080/api/widgets/${widgetId}`, {
         method: 'PUT',
         body: JSON.stringify(widget),
         headers: {
@@ -29,8 +29,8 @@ export const updateWidget = (widgetId, widget) =>
         .then(response => response.json());
 
 export const deleteWidget = (widgetId) =>
-    //fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/widgets/${widgetId}`, {
-    fetch(`http://localhost:8080/api/widgets/${widgetId}`, {
+    fetch(`https://wbdv-sp21-slatus-java.herokuapp.com/api/widgets/${widgetId}`, {
+    //fetch(`http://localhost:8080/api/widgets/${widgetId}`, {
         method: 'DELETE'
     })
         .then(response => response.json());
