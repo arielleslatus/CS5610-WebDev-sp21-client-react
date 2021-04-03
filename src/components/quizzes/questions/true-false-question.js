@@ -5,7 +5,7 @@ const TrueFalseQuestion = ({question}) => {
     const [userAnswer, setUserAnswer] = useState(null);
     const [graded, setGraded] = useState(false);
      return(
-         <div>
+         <div className="ats-question-block">
              {
                  !graded &&
                  <>
@@ -17,7 +17,8 @@ const TrueFalseQuestion = ({question}) => {
                                         onClick={() => setUserAnswer(true)}
                                         name={question._id}
                                         className="ats-question-input col-1"/>
-                                 <div className="col-11">TRUE</div>
+                                 <div className="col-10">TRUE</div>
+                                 <div className="col-1"></div>
                              </label>
                          </li>
                          <li className="list-group-item ats-question-choice">
@@ -26,7 +27,8 @@ const TrueFalseQuestion = ({question}) => {
                                         onClick={() => setUserAnswer(false)}
                                         name={question._id}
                                         className="ats-question-input col-1"/>
-                                 <div className="col-11">FALSE</div>
+                                 <div className="col-10">FALSE</div>
+                                 <div className="col-1"></div>
                              </label>
                          </li>
                      </ul>
@@ -36,8 +38,8 @@ const TrueFalseQuestion = ({question}) => {
                  graded === true && JSON.stringify(userAnswer) === question.correct &&
                  <>
                      <h4>
-                         {question.question}
-                         <i className="fas fa-check"></i>
+                         <>{question.question}  </>
+                         <i className="fas fa-check ats-check"></i>
                      </h4>
                      <ul className="list-group">
                          {
@@ -49,7 +51,7 @@ const TrueFalseQuestion = ({question}) => {
                                                 checked disabled
                                                 className="ats-question-input col-1"/>
                                          <div className="col-10">TRUE</div>
-                                         <i className="fas fa-check ats-graded-icon col-1"></i>
+                                         <i className="fas fa-check ats-check ats-graded-icon col-1"></i>
 
                                      </label>
                                  </li>
@@ -57,7 +59,8 @@ const TrueFalseQuestion = ({question}) => {
                                      <label className="ats-question-label row">
                                          <input type="radio" disabled
                                                 className="ats-question-input col-1"/>
-                                         <div className="col-11">FALSE</div>
+                                         <div className="col-10">FALSE</div>
+                                         <div className="col-1"></div>
                                      </label>
 
                                  </li>
@@ -70,7 +73,8 @@ const TrueFalseQuestion = ({question}) => {
                                      <label className="ats-question-label row">
                                          <input type="radio" disabled
                                                 className="ats-question-input col-1"/>
-                                         <div className="col-11">TRUE</div>
+                                         <div className="col-10">TRUE</div>
+                                         <div className="col-1"></div>
                                      </label>
                                  </li>
                                  <li className="list-group-item ats-question-choice ats-active">
@@ -79,7 +83,7 @@ const TrueFalseQuestion = ({question}) => {
                                                 checked disabled
                                                 className="ats-question-input col-1"/>
                                          <div className="col-10">FALSE</div>
-                                         <i className="fas fa-check ats-graded-icon col-1"></i>
+                                         <i className="fas fa-check ats-check ats-graded-icon col-1"></i>
 
                                      </label>
                                  </li>
@@ -93,8 +97,8 @@ const TrueFalseQuestion = ({question}) => {
                  graded === true && JSON.stringify(userAnswer) !== question.correct &&
                  <>
                      <h4>
-                         {question.question}
-                         <i className="fas fa-times"></i>
+                         <>{question.question}  </>
+                         <i className="fas fa-times ats-times"></i>
                      </h4>
                      <ul className="list-group">
                          {
@@ -107,7 +111,7 @@ const TrueFalseQuestion = ({question}) => {
                                                 disabled
                                                 className="ats-question-input col-1"/>
                                          <div className="col-10">TRUE</div>
-                                         <i className="fas fa-times ats-graded-icon col-1"></i>
+                                         <i className="fas fa-times ats-times ats-graded-icon col-1"></i>
                                      </label>
                                  </li>
                                  <li className="list-group-item ats-question-choice ats-active">
@@ -116,7 +120,7 @@ const TrueFalseQuestion = ({question}) => {
                                                 disabled
                                                 className="ats-question-input col-1"/>
                                          <div className="col-10">FALSE</div>
-                                         <i className="fas fa-check ats-graded-icon col-1"></i>
+                                         <i className="fas fa-check ats-check ats-graded-icon col-1"></i>
                                      </label>
                                  </li>
                              </>
@@ -130,7 +134,7 @@ const TrueFalseQuestion = ({question}) => {
                                                 disabled
                                                 className="ats-question-input col-1"/>
                                          <div className="col-10">TRUE</div>
-                                         <i className="fas fa-check ats-graded-icon col-1"></i>
+                                         <i className="fas fa-check ats-check ats-graded-icon col-1"></i>
                                      </label>
                                  </li>
                                  <li className="list-group-item ats-question-choice ats-wrong-active">
@@ -140,7 +144,7 @@ const TrueFalseQuestion = ({question}) => {
                                                 disabled
                                                 className="ats-question-input col-1"/>
                                          <div className="col-10">FALSE</div>
-                                         <i className="fas fa-times ats-graded-icon col-1"></i>
+                                         <i className="fas fa-times ats-times ats-times ats-graded-icon col-1"></i>
                                      </label>
                                  </li>
                              </>
@@ -151,13 +155,16 @@ const TrueFalseQuestion = ({question}) => {
                  </>
 
              }
+             <br/>
              <div>Your Answer:
                  {
                      userAnswer !== null &&
-                     JSON.stringify(userAnswer)
+                     <> {JSON.stringify(userAnswer)}</>
                  }
              </div>
-             <button onClick={() => setGraded(true)}>Grade</button>
+             <br/>
+             <button onClick={() => setGraded(true)}
+                     className="ats-grade-btn">Grade</button>
 
          </div>
      )

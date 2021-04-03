@@ -5,11 +5,13 @@ const MultipleChoiceQuestion = ({question}) => {
     const [userAnswer, setUserAnswer] = useState("");
     const [graded, setGraded] = useState(false);
     return(
-        <div>
+        <div className="ats-question-block">
             {
                 !graded &&
                 <>
-                    <h4>{question.question}</h4>
+                    <h4>
+                        {question.question}
+                    </h4>
                     <ul className="list-group">
                         {
                             question.choices.map((choice) => {
@@ -20,7 +22,8 @@ const MultipleChoiceQuestion = ({question}) => {
                                                    onClick={() => setUserAnswer(choice)}
                                                    name={question._id}
                                                    className="ats-question-input col-1"/>
-                                            <div className="col-11">{choice}</div>
+                                            <div className="col-10">{choice}</div>
+                                            <div className="col-1"></div>
                                         </label>
                                     </li>
                                 )
@@ -32,8 +35,9 @@ const MultipleChoiceQuestion = ({question}) => {
             {
                 graded && userAnswer === question.correct &&
                 <>
-                    <h4>{question.question}
-                        <i className="fas fa-check"></i>
+                    <h4>
+                        <>{question.question}  </>
+                        <i className="fas fa-check ats-check"></i>
                     </h4>
                     <ul className="list-group">
                         {
@@ -49,7 +53,7 @@ const MultipleChoiceQuestion = ({question}) => {
                                                            disabled
                                                            className="ats-question-input col-1"/>
                                                     <div className="col-10">{choice}</div>
-                                                    <i className="fas fa-check ats-graded-icon col-1"></i>
+                                                    <i className="fas fa-check ats-check ats-graded-icon col-1"></i>
                                                 </label>
                                             </li>
                                         }
@@ -60,7 +64,8 @@ const MultipleChoiceQuestion = ({question}) => {
                                                     <input type="radio"
                                                            disabled
                                                            className="ats-question-input col-1"/>
-                                                    <div className="col-11">{choice}</div>
+                                                    <div className="col-10">{choice}</div>
+                                                    <div className="col-1"></div>
                                                 </label>
                                             </li>
                                         }
@@ -75,8 +80,9 @@ const MultipleChoiceQuestion = ({question}) => {
             {
                 graded && userAnswer !== question.correct &&
                 <>
-                    <h4>{question.question}
-                        <i className="fas fa-times"></i>
+                    <h4>
+                        <>{question.question}  </>
+                        <i className="fas fa-times ats-times"></i>
                     </h4>
                     <ul className="list-group">
                         {
@@ -91,31 +97,32 @@ const MultipleChoiceQuestion = ({question}) => {
                                                            disabled
                                                            className="ats-question-input col-1"/>
                                                     <div className="col-10">{choice}</div>
-                                                    <i className="fas fa-check ats-graded-icon col-1"></i>
+                                                    <i className="fas fa-check ats-check ats-graded-icon col-1"></i>
                                                 </label>
                                             </li>
                                         }
                                         {
                                             choice !== question.correct && choice === userAnswer &&
                                             <li className="list-group-item ats-question-choice ats-wrong-active">
-                                                <label className="ats-question-label">
+                                                <label className="ats-question-label row">
                                                     <input type="radio"
                                                            checked
                                                            disabled
                                                            className="ats-question-input col-1"/>
                                                     <div className="col-10">{choice}</div>
-                                                    <i className="fas fa-times ats-graded-icon col-1"></i>
+                                                    <i className="fas fa-times ats-times ats-graded-icon col-1"></i>
                                                 </label>
                                             </li>
                                         }
                                         {
                                             choice !== question.correct && choice !== userAnswer &&
                                             <li className="list-group-item ats-question-choice">
-                                                <label className="ats-question-label">
+                                                <label className="ats-question-label row">
                                                     <input type="radio"
                                                            disabled
                                                            className="ats-question-input col-1"/>
-                                                    <div className="col-11">{choice}</div>
+                                                    <div className="col-10">{choice}</div>
+                                                    <div className="col-1"></div>
                                                 </label>
                                             </li>
                                         }
@@ -126,13 +133,16 @@ const MultipleChoiceQuestion = ({question}) => {
                     </ul>
                 </>
             }
+            <br/>
             <div>Your Answer:
                 {
                     userAnswer !== null &&
-                    userAnswer
+                    <> {userAnswer}</>
                 }
             </div>
-            <button onClick={() => setGraded(true)}>Grade</button>
+            <br/>
+            <button onClick={() => setGraded(true)}
+                    className="ats-grade-btn">Grade</button>
         </div>
     )
 }

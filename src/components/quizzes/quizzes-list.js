@@ -12,8 +12,8 @@ const QuizzesList = () => {
             });
     }, [])
     return(
-        <div>
-            <h2>Quizzes List</h2>
+        <div className="ats-quiz-list-page-body">
+            <h2 className="ats-quiz-title">Quizzes List</h2>
             <div className="list-group">
                 {
                     quizzes.map((quiz) => {
