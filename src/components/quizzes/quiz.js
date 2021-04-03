@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import questionService from '../../services/question-service'
+import Question from "./questions/question";
 
 const Quiz = () => {
     const [questions, setQuestions] = useState([]);
@@ -21,7 +22,7 @@ const Quiz = () => {
 
                             <li key={question._id}
                                 className="list-group-item">
-                                {question.question}
+                                <Question question={question}/>
                             </li>
                         )
                     })

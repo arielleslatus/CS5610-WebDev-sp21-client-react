@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/quizzes/quiz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/quizzes/quizzes-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/question-service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/quiz-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/quizzes/questions/multiple-choice-question.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/quizzes/questions/question.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/quizzes/questions/true-false-question.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-manager/sub-nav-bar-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-manager/sub-nav-bar-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-table/course-row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-table/course-row.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/quizzes/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/quiz.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,15 +49,16 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JPA/Hibernate QL" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/course-editor" />
+      <recent name="$PROJECT_DIR$/src/reducers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/quizzes/questions" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/services" />
       <recent name="$PROJECT_DIR$/src/components/course-editor" />
       <recent name="$PROJECT_DIR$/src/components/counter" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/course-editor" />
-      <recent name="$PROJECT_DIR$/src/reducers" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -93,7 +91,8 @@
       <workItem from="1617022134173" duration="5050000" />
       <workItem from="1617037477424" duration="299000" />
       <workItem from="1617285117650" duration="298000" />
-      <workItem from="1617384541408" duration="9070000" />
+      <workItem from="1617384541408" duration="9167000" />
+      <workItem from="1617460792317" duration="3343000" />
     </task>
     <servers />
   </component>
