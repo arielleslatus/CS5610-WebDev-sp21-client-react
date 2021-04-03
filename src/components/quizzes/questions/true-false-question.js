@@ -7,7 +7,7 @@ const TrueFalseQuestion = ({question}) => {
      return(
          <div>
              {
-                 graded === false &&
+                 !graded &&
                  <>
                      <h4>{question.question}</h4>
                      <ul className="list-group">
