@@ -5,3 +5,19 @@
 .ats-wrong-active {
     background-color: palevioletred;
 }
+
+.ats-graded-icon {
+    margin-top: 4px;
+}
+
+.ats-question-choice {
+    width: 500px;
+}
+
+.ats-question-label {
+    margin: 0 auto;
+}
+
+.ats-question-input {
+    margin-top: 7px;
+}

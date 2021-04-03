@@ -11,20 +11,22 @@ const TrueFalseQuestion = ({question}) => {
                  <>
                      <h4>{question.question}</h4>
                      <ul className="list-group">
-                         <li className="list-group-item">
-                             <label>
+                         <li className="list-group-item ats-question-choice">
+                             <label className="ats-question-label row">
                                  <input type="radio"
                                         onClick={() => setUserAnswer(true)}
-                                        name={question._id}/>
-                                 True
+                                        name={question._id}
+                                        className="ats-question-input col-1"/>
+                                 <div className="col-11">TRUE</div>
                              </label>
                          </li>
-                         <li className="list-group-item">
-                             <label>
+                         <li className="list-group-item ats-question-choice">
+                             <label className="ats-question-label row">
                                  <input type="radio"
                                         onClick={() => setUserAnswer(false)}
-                                        name={question._id}/>
-                                 False
+                                        name={question._id}
+                                        className="ats-question-input col-1"/>
+                                 <div className="col-11">FALSE</div>
                              </label>
                          </li>
                      </ul>
@@ -41,19 +43,21 @@ const TrueFalseQuestion = ({question}) => {
                          {
                              userAnswer == true &&
                              <>
-                                 <li className="list-group-item ats-active">
-                                     <label>
+                                 <li className="list-group-item ats-question-choice ats-active">
+                                     <label className="ats-question-label row">
                                          <input type="radio"
-                                                checked disabled/>
-                                         True
-                                         <i className="fas fa-check"></i>
+                                                checked disabled
+                                                className="ats-question-input col-1"/>
+                                         <div className="col-10">TRUE</div>
+                                         <i className="fas fa-check ats-graded-icon col-1"></i>
 
                                      </label>
                                  </li>
-                                 <li className="list-group-item">
-                                     <label>
-                                         <input type="radio" disabled/>
-                                         False
+                                 <li className="list-group-item ats-question-choice">
+                                     <label className="ats-question-label row">
+                                         <input type="radio" disabled
+                                                className="ats-question-input col-1"/>
+                                         <div className="col-11">FALSE</div>
                                      </label>
 
                                  </li>
@@ -62,18 +66,20 @@ const TrueFalseQuestion = ({question}) => {
                          {
                              userAnswer === false &&
                              <>
-                                 <li className="list-group-item">
-                                     <label>
-                                         <input type="radio" disabled/>
-                                         True
+                                 <li className="list-group-item ats-question-choice">
+                                     <label className="ats-question-label row">
+                                         <input type="radio" disabled
+                                                className="ats-question-input col-1"/>
+                                         <div className="col-11">TRUE</div>
                                      </label>
                                  </li>
-                                 <li className="list-group-item ats-active">
-                                     <label>
+                                 <li className="list-group-item ats-question-choice ats-active">
+                                     <label className="ats-question-label row">
                                          <input type="radio"
-                                                checked disabled/>
-                                         False
-                                         <i className="fas fa-check"></i>
+                                                checked disabled
+                                                className="ats-question-input col-1"/>
+                                         <div className="col-10">FALSE</div>
+                                         <i className="fas fa-check ats-graded-icon col-1"></i>
 
                                      </label>
                                  </li>
@@ -94,21 +100,23 @@ const TrueFalseQuestion = ({question}) => {
                          {
                              userAnswer == true &&
                              <>
-                                 <li className="list-group-item ats-wrong-active">
-                                     <label>
+                                 <li className="list-group-item ats-question-choice ats-wrong-active">
+                                     <label className="ats-question-label row">
                                          <input type="radio"
                                                 checked
-                                                disabled/>
-                                         True
-                                         <i className="fas fa-times"></i>
+                                                disabled
+                                                className="ats-question-input col-1"/>
+                                         <div className="col-10">TRUE</div>
+                                         <i className="fas fa-times ats-graded-icon col-1"></i>
                                      </label>
                                  </li>
-                                 <li className="list-group-item ats-active">
-                                     <label>
+                                 <li className="list-group-item ats-question-choice ats-active">
+                                     <label className="ats-question-label row">
                                          <input type="radio"
-                                                disabled/>
-                                         False
-                                         <i className="fas fa-check"></i>
+                                                disabled
+                                                className="ats-question-input col-1"/>
+                                         <div className="col-10">FALSE</div>
+                                         <i className="fas fa-check ats-graded-icon col-1"></i>
                                      </label>
                                  </li>
                              </>
@@ -116,21 +124,23 @@ const TrueFalseQuestion = ({question}) => {
                          {
                              userAnswer === false &&
                              <>
-                                 <li className="list-group-item ats-active">
-                                     <label>
+                                 <li className="list-group-item ats-question-choice ats-active">
+                                     <label className="ats-question-label row">
                                          <input type="radio"
-                                                disabled/>
-                                         True
-                                         <i className="fas fa-check"></i>
+                                                disabled
+                                                className="ats-question-input col-1"/>
+                                         <div className="col-10">TRUE</div>
+                                         <i className="fas fa-check ats-graded-icon col-1"></i>
                                      </label>
                                  </li>
-                                 <li className="list-group-item ats-wrong-active">
-                                     <label>
+                                 <li className="list-group-item ats-question-choice ats-wrong-active">
+                                     <label className="ats-question-label row">
                                          <input type="radio"
                                                 checked
-                                                disabled/>
-                                         False
-                                         <i className="fas fa-times"></i>
+                                                disabled
+                                                className="ats-question-input col-1"/>
+                                         <div className="col-10">FALSE</div>
+                                         <i className="fas fa-times ats-graded-icon col-1"></i>
                                      </label>
                                  </li>
                              </>
