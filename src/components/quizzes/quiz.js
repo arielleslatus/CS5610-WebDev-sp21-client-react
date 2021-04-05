@@ -16,7 +16,7 @@ const Quiz = () => {
     return(
         <div className="ats-quiz-page-body">
             <h2 className="ats-quiz-title">Quiz {quizId}</h2>
-            <ol className="list-group">
+            <ol className="list-group ats-question-list">
                 {
                     questions.map(question => {
                         return(

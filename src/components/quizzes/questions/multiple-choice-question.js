@@ -12,7 +12,7 @@ const MultipleChoiceQuestion = ({question}) => {
                     <h4>
                         {question.question}
                     </h4>
-                    <ul className="list-group">
+                    <ul className="list-group ats-question-list">
                         {
                             question.choices.map((choice) => {
                                 return(
@@ -39,7 +39,7 @@ const MultipleChoiceQuestion = ({question}) => {
                         <>{question.question}  </>
                         <i className="fas fa-check ats-check"></i>
                     </h4>
-                    <ul className="list-group">
+                    <ul className="list-group ats-question-list">
                         {
                             question.choices.map((choice) => {
                                 return(
@@ -84,7 +84,7 @@ const MultipleChoiceQuestion = ({question}) => {
                         <>{question.question}  </>
                         <i className="fas fa-times ats-times"></i>
                     </h4>
-                    <ul className="list-group">
+                    <ul className="list-group ats-question-list">
                         {
                             question.choices.map((choice) => {
                                 return(

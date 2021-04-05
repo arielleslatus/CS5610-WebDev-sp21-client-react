@@ -15,3 +15,10 @@ code {
 .list-group-item.active a {
   color: white;
 }
+
+html, body{
+  background: lightsteelblue;
+  min-height: 100%;
+  min-height: 100vh;
+  overflow: auto;
+}

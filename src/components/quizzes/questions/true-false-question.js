@@ -10,7 +10,7 @@ const TrueFalseQuestion = ({question}) => {
                  !graded &&
                  <>
                      <h4>{question.question}</h4>
-                     <ul className="list-group">
+                     <ul className="list-group ats-question-list">
                          <li className="list-group-item ats-question-choice">
                              <label className="ats-question-label row">
                                  <input type="radio"
@@ -41,7 +41,7 @@ const TrueFalseQuestion = ({question}) => {
                          <>{question.question}  </>
                          <i className="fas fa-check ats-check"></i>
                      </h4>
-                     <ul className="list-group">
+                     <ul className="list-group ats-question-list">
                          {
                              userAnswer == true &&
                              <>
@@ -100,7 +100,7 @@ const TrueFalseQuestion = ({question}) => {
                          <>{question.question}  </>
                          <i className="fas fa-times ats-times"></i>
                      </h4>
-                     <ul className="list-group">
+                     <ul className="list-group ats-question-list">
                          {
                              userAnswer == true &&
                              <>
