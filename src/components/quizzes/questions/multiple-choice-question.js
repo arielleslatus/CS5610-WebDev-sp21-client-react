@@ -4,6 +4,10 @@ import './question-style.css'
 const MultipleChoiceQuestion = ({question}) => {
     const [userAnswer, setUserAnswer] = useState("");
     const [graded, setGraded] = useState(false);
+    const setQuestionAnswer = () => {
+        question.answer = userAnswer;
+    }
+
     return(
         <div className="ats-question-block">
             {
@@ -141,7 +145,7 @@ const MultipleChoiceQuestion = ({question}) => {
                 }
             </div>
             <br/>
-            <button onClick={() => setGraded(true)}
+            <button onClick={() => {setGraded(true); setQuestionAnswer()}}
                     className="ats-grade-btn">Grade</button>
         </div>
     )

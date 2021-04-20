@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import questionService from '../../services/question-service'
+import quizService from '../../services/quiz-service'
+
 import Question from "./questions/question";
 import './quizzes-style.css'
 
@@ -13,6 +15,10 @@ const Quiz = () => {
                 setQuestions(questions)
             })
     }, [])
+
+    const submitQuiz = () => {
+        quizService.submitQuiz(quizId, questions)
+    }
     return(
         <div className="ats-quiz-page-body">
             <h2 className="ats-quiz-title">Quiz {quizId}</h2>
@@ -29,6 +35,9 @@ const Quiz = () => {
                     })
                 }
             </ol>
+            <Link to={`/courses/${courseId}/quizzes/${quizId}/scores`} onClick={() => submitQuiz()} className="ats-submit-quiz-btn">
+                Submit Quiz
+            </Link>
         </div>
     )
 }

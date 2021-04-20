@@ -1,8 +1,11 @@
 const QUIZZES_URL = 'http://localhost:3001/api/quizzes';
+const QUESTIONS_URL = 'http://localhost:3001/api/questions';
 
-const findQuestionsForQuiz = (qid) =>
-    fetch(`${QUIZZES_URL}/${qid}/questions`)
+const findQuestionsForQuiz = (qzid) =>
+    fetch(`${QUIZZES_URL}/${qzid}/questions`)
         .then(response => response.json())
+
+
 
 
 const api = {

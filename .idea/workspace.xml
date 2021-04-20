@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/users/admin-content.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/users/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/users/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/users/public-content.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/users/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/quizzes/scores/scores-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/quizzes/scores/scores.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/scores-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/user-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course-manager/course-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course-manager/course-manager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/quizzes/questions/multiple-choice-question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/questions/multiple-choice-question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/quizzes/questions/true-false-question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/questions/true-false-question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/quizzes/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/quizzes/quizzes-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/quizzes-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/quizzes/quizzes-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/quizzes-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/question-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/question-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/quiz-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/quiz-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTTP Request" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -105,7 +110,7 @@
       <workItem from="1618414585738" duration="7735000" />
       <workItem from="1618577100178" duration="3113000" />
       <workItem from="1618792338831" duration="4240000" />
-      <workItem from="1618856815134" duration="2195000" />
+      <workItem from="1618856815134" duration="11209000" />
     </task>
     <servers />
   </component>

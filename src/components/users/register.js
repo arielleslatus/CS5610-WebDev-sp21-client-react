@@ -1,33 +1,32 @@
 import React, {useState} from 'react';
-import {useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
+import userService from '../../services/user-service'
 
 const Register = () => {
-    const [user, setUser] = useState({})
-    const register = () => { // TODO: in userService.js file
-        fetch("http://localhost:3001/api/register", {
-            method: "POST",
-            body: JSON.stringify(user),
-            headers: {
-                'content-type': 'application/json'
-            }
-        }).then(response => response.json())
-            .catch(error => {
-                console.log(error) // 403
+    const [credentials, setCredentials] = useState({username: '', password: ''})
+    const history = useHistory()
+    const register = () => {
+        userService.register(credentials)
+            .then((user) => {
+                console.log(user)
+                if (user === 0) {
+                    alert("username already taken")
+                } else {
+                    history.push("/profile")
+                }
             })
-            .then((actualUser) => {
-                useHistory.push("/profile")
-            })
-    }
+    };
+
     return(
         <div>
             <h1>Register</h1>
-            <input value={user.username}
-                   onChange={(e) => setUser({...user, username: e.target.value})}
+            <input value={credentials.username}
+                   onChange={(e) => setCredentials({...credentials, username: e.target.value})}
                    placeholder="username"
                    className="form-control"/>
             <input type="password"
-                   value={user.password}
-                   onChange={(e) => setUser({...user, password: e.target.value})}
+                   value={credentials.password}
+                   onChange={(e) => setCredentials({...credentials, password: e.target.value})}
                    placeholder="password"
                    className="form-control"/>
             <input type="password" placeholder="confirm password"
@@ -37,7 +36,9 @@ const Register = () => {
                 <option>FACULTY</option>
                 <option>STUDENT</option>
             </select>
-            <button onClick={() => register()} className="btn">Register</button>
+            <Link onClick={() => register()} className="btn" to="/profile">
+                Register
+            </Link>
         </div>
     )
 }

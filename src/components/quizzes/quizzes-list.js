@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
-import quizzesService from '../../services/quiz-service'
+import quizService from '../../services/quiz-service'
 
 const QuizzesList = () => {
     const [quizzes, setQuizzes] = useState([])
     const {courseId} = useParams();
     useEffect(() => {
-        quizzesService.findAllQuizzes()
+        quizService.findAllQuizzes()
             .then((quizzes) => {
                 setQuizzes(quizzes)
             });

@@ -10,6 +10,7 @@ import Quiz from "./components/quizzes/quiz";
 import Login from "./components/users/login";
 import Register from "./components/users/register";
 import Profile from "./components/users/profile";
+import Scores from "./components/quizzes/scores/scores";
 
 
 
@@ -46,6 +47,9 @@ function App() {
               <Route path={"/courses/:courseId/quizzes/:quizId"}
                      exact={true}
                      component={Quiz}/>
+              <Route path={"/courses/:courseId/quizzes/:quizId/scores"}
+                     exact={true}
+                     component={Scores}/>
 
           </Switch>
       </BrowserRouter>

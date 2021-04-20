@@ -9,4 +9,16 @@
     align-items: center;
 }
 
+.ats-submit-quiz-btn {
+    background-color: darkslateblue;
+    color: whitesmoke;
+    border-radius: 5px;
+    border: none;
+    font-size: medium;
+    padding: 5px 10px;
+    margin: 10px 0px 50px 0px;
+}
 
+.ats-quiz-page-body {
+    text-align: center;
+}
