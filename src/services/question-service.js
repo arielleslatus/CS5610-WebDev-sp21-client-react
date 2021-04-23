@@ -4,6 +4,7 @@ const QUIZZES_URL = 'https://wbdv-sp21-slatus-node-server.herokuapp.com/api/quiz
 const QUESTIONS_URL = 'https://wbdv-sp21-slatus-node-server.herokuapp.com//api/questions';
 
 const findQuestionsForQuiz = (qzid) =>
+    console.log("quiz id: " + qzid)
     fetch(`${QUIZZES_URL}/${qzid}/questions`)
         .then(response => response.json())
 
