@@ -8,7 +8,6 @@ const Register = () => {
     const register = () => {
         userService.register(credentials)
             .then((user) => {
-                console.log(user)
                 if (user === 0) {
                     alert("username already taken")
                 } else {
@@ -31,10 +30,11 @@ const Register = () => {
                    className="form-control"/>
             <input type="password" placeholder="confirm password"
                    className="form-control"/>
-            <select>
-                <option>ADMIN</option>
-                <option>FACULTY</option>
-                <option>STUDENT</option>
+            <select defaultValue="STUDENT"
+                    onChange={(e) => {const role = e.target.value; setCredentials({...credentials, role: role})}}>
+                <option value="ADMIN">ADMIN</option>
+                <option value="FACULTY">FACULTY</option>
+                <option value="STUDENT">STUDENT</option>
             </select>
             <Link onClick={() => register()} className="btn" to="/profile">
                 Register

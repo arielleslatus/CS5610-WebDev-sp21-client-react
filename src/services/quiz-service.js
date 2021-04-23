@@ -1,4 +1,5 @@
-const QUIZZES_URL = "http://localhost:3001/api/quizzes"
+//const QUIZZES_URL = "http://localhost:3001/api/quizzes"
+const QUIZZES_URL = "https://wbdv-sp21-slatus-node-server.herokuapp.com/api/quizzes"
 
 export const createTopic = (lessonId, topic) => {}
 

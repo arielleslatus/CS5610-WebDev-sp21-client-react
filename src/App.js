@@ -32,6 +32,9 @@ function App() {
               <Route path="/profile"
                      exact={true}
                      component={Profile}/>
+              <Route path="/profile/:userId"
+                     exact={true}
+                     component={Profile}/>
               <Route path={["/courses/:layout/edit/:courseId",
                             "/courses/:layout/edit/:courseId/modules/:moduleId",
                             "/courses/:layout/edit/:courseId/modules/:moduleId/lessons/:lessonId",

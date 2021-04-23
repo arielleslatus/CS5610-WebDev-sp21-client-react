@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f752842c-5892-46ba-b7dd-f0e4cb2c34b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/quizzes/scores/scores-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/quizzes/scores/scores.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/scores-service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/user-service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/users/private-content.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/quizzes/questions/multiple-choice-question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/questions/multiple-choice-question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/quizzes/questions/true-false-question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/questions/true-false-question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/quizzes/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/quiz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/quizzes/quizzes-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/quizzes-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/quizzes/quizzes-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/quizzes/quizzes-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/question-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/question-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/quiz-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/quiz-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/user-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +103,11 @@
       <workItem from="1618414585738" duration="7735000" />
       <workItem from="1618577100178" duration="3113000" />
       <workItem from="1618792338831" duration="4240000" />
-      <workItem from="1618856815134" duration="11209000" />
+      <workItem from="1618856815134" duration="12835000" />
+      <workItem from="1618952970981" duration="541000" />
+      <workItem from="1619015240675" duration="19461000" />
+      <workItem from="1619183876311" duration="15000" />
+      <workItem from="1619192912922" duration="2332000" />
     </task>
     <servers />
   </component>
@@ -134,11 +131,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="299" y="27" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1616431058404" />
-    <state x="519" y="608" key="com.intellij.ide.util.TipDialog" timestamp="1618856814721">
+    <state x="519" y="608" key="com.intellij.ide.util.TipDialog" timestamp="1619183876225">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="519" y="607" key="com.intellij.ide.util.TipDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1616350409931" />
-    <state x="519" y="608" key="com.intellij.ide.util.TipDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1618856814721" />
+    <state x="519" y="608" key="com.intellij.ide.util.TipDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1619183876225" />
     <state x="490" y="149" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1616418364787">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

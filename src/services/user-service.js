@@ -1,9 +1,22 @@
-const USER_API = "http://localhost:3001/api/users";
+const USER_API = "http://localhost:8080/api";
 
 const profile = () => {
     return fetch(`${USER_API}/profile`, {
-        method: "POST",
-        credentials: "include"
+        method: "GET",
+        credentials: "include",
+        headers: {
+            'content-type': 'application/json'
+        }
+    }).then(response => response.json())
+};
+
+const publicProfile = (userId) => {
+    return fetch(`${USER_API}/profile/${userId}`, {
+        method: "GET",
+        credentials: "include",
+        headers: {
+            'content-type': 'application/json'
+        }
     }).then(response => response.json())
 };
 
@@ -22,7 +35,7 @@ const login = (credentials) => {
 const register = (credentials) => {
     return fetch(`${USER_API}/register`, {
         method: "POST",
-        credentials: "include",
+        //credentials: "include",
         body: JSON.stringify(credentials),
         headers: {
             'content-type': 'application/json'
@@ -36,7 +49,8 @@ const api = {
     register,
     login,
     logout,
-    profile
+    profile,
+    publicProfile
 };
 
 export default api;
