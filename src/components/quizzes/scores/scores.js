@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import quizService from "../../../services/quiz-service";
 import './scores-style.css'
-import {Link} from "react-router-dom";
 
 const Scores = () => {
     const {courseId, quizId} = useParams();
@@ -25,7 +24,7 @@ const Scores = () => {
                             <li key={attempt._id} className="list-group-item ats-score">
                                 <div className="row">
                                     <div className="col-6">Attempt {count()}:</div>
-                                    <div className="col-6">{attempt.score}</div>
+                                    <div className="col-6">{attempt._id}</div>
                                 </div>
                             </li>
                         )
