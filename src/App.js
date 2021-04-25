@@ -50,7 +50,7 @@ function App() {
               <Route path={"/courses/:courseId/quizzes/:quizId"}
                      exact={true}
                      component={Quiz}/>
-              <Route path={"/courses/:courseId/quizzes/:quizId/scores"}
+              <Route path={"/courses/:courseId/quizzes/:quizId/attempts"}
                      exact={true}
                      component={Scores}/>
 
