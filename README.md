@@ -6,4 +6,6 @@ Arielle Slatus
 
 Professor Jose Annunziato
 
+Northeastern University
+
 Spring 2021
